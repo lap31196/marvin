@@ -33,23 +33,33 @@ def generate_launch_description():
     )
 
     world_path = PathJoinSubstitution(
-        [FindPackageShare("marvin_gazebo"), "worlds", "gas_station.world"]
+        [FindPackageShare("marvin_gazebo"), "worlds", "simple.world"]
     )
 
     description_launch_path = PathJoinSubstitution(
-        [FindPackageShare('marvin_description'), 'launch', 'description.launch.py']
+        [FindPackageShare('marvin_description'), 'launch',
+         'description.launch.py']
     )
 
     return LaunchDescription([
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(description_launch_path),
+            launch_arguments={
+                'use_sim_time': str(use_sim_time),
+                'publish_joints': 'true',
+            }.items()
+        ),
+
         DeclareLaunchArgument(
-            name='world', 
+            name='world',
             default_value=world_path,
             description='Gazebo world'
         ),
 
         ExecuteProcess(
-            cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_factory.so',  '-s', 'libgazebo_ros_init.so', LaunchConfiguration('world')],
-            output='screen'
+            cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_factory.so',
+                 '-s', 'libgazebo_ros_init.so', LaunchConfiguration('world')],
+            output='screen',
         ),
 
         Node(
@@ -57,7 +67,11 @@ def generate_launch_description():
             executable='spawn_entity.py',
             name='urdf_spawner',
             output='screen',
-            arguments=["-topic", "robot_description", "-entity", "marvin"]
+            arguments=["-topic", "robot_description", "-entity", "marvin_description",
+                       "-x", '0.0',
+                       "-y", '0.0',
+                       "-z", '0.08',
+                       "-Y", '0.0']
         ),
 
         Node(
@@ -72,26 +86,19 @@ def generate_launch_description():
             name='ekf_filter_node',
             output='screen',
             parameters=[
-                {'use_sim_time': use_sim_time}, 
+                {'use_sim_time': str(use_sim_time)},
                 ekf_config_path
             ],
             remappings=[("odometry/filtered", "odom")]
         ),
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(description_launch_path),
-            launch_arguments={
-                'use_sim_time': str(use_sim_time),
-                'publish_joints': 'false',
-            }.items()
-        ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(joy_launch_path),
         )
     ])
 
-#sources: 
-#https://navigation.ros.org/setup_guides/index.html#
-#https://answers.ros.org/question/374976/ros2-launch-gazebolaunchpy-from-my-own-launch-file/
-#https://github.com/ros2/rclcpp/issues/940
+# sources:
+# https://navigation.ros.org/setup_guides/index.html#
+# https://answers.ros.org/question/374976/ros2-launch-gazebolaunchpy-from-my-own-launch-file/
+# https://github.com/ros2/rclcpp/issues/940

@@ -11,19 +11,6 @@ Stephen Brawner (brawner@gmail.com)
     <xacro:include
         filename="$(find marvin_description)/urdf/controller/ackermann_drive.urdf.xacro" />
 
-    <xacro:imu />
-    <xacro:lidar
-        update_rate="10"
-        ray_count="360"
-        min_angle="-3.1416"
-        max_angle="3.1416"
-        min_range="0.21"
-        max_range="5.5"
-        frame_id="lidar"
-        topic_name="base/scan">
-    </xacro:lidar>
-    <xacro:depth_camera />
-    <xacro:ackermann_drive_controller />
 
     <link
         name="base_link">
@@ -589,4 +576,18 @@ Stephen Brawner (brawner@gmail.com)
         <kd>1</kd>
         <material>Gazebo/White</material>
     </gazebo>
+
+    <xacro:imu />
+    <xacro:lidar
+        update_rate="10"
+        ray_count="360"
+        min_angle="-3.1416"
+        max_angle="3.1416"
+        min_range="0.21"
+        max_range="5.5"
+        frame_id="lidar"
+        topic_name="base/scan">
+    </xacro:lidar>
+    <xacro:depth_camera />
+    <xacro:ackermann_drive_controller />
 </robot>

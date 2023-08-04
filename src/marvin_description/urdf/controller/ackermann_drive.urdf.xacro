@@ -5,7 +5,7 @@
                 <ros>
                     <!-- <namespace></namespace> -->
                     <remapping>cmd_vel:=cmd_vel</remapping>
-                    <remapping>odom:=ground_truth/odom</remapping>
+                    <remapping>odom:=odom/unfiltered</remapping>
                 </ros>
                 <updateRate>100</updateRate>
                 <num_wheel_pairs>2</num_wheel_pairs>
