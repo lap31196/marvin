@@ -35,6 +35,10 @@ def generate_launch_description():
     world_path = PathJoinSubstitution(
         [FindPackageShare("marvin_gazebo"), "worlds", "simple.world"]
     )
+    
+    gazebo_params_path=PathJoinSubstitution(
+        [FindPackageShare("marvin_bringup"), "config", "gazebo_params.yaml"]
+    )
 
     description_launch_path = PathJoinSubstitution(
         [FindPackageShare('marvin_description'), 'launch',
@@ -50,13 +54,16 @@ def generate_launch_description():
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(description_launch_path),
-            launch_arguments={'use_sim_time': 'true'}.items()
+            launch_arguments={'use_sim_time': 'true',
+                              'publish_joints':'false',
+                              }.items()
         ),
 
         ExecuteProcess(
             cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_factory.so',
                  '-s', 'libgazebo_ros_init.so', LaunchConfiguration('world')],
-            output='screen'
+            output='screen',
+            #launch_arguments={'extra_gazebo_args':'--ros-args --params-file '+str(gazebo_params_path)}
         ),
 
         Node(
@@ -90,7 +97,7 @@ def generate_launch_description():
         ),
 
         IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(joy_launch_path),
+            PythonLaunchDescriptionSource(joy_launch_path)
         )
     ])
 
