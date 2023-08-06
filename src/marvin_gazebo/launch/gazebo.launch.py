@@ -42,24 +42,21 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(description_launch_path),
-            launch_arguments={
-                'use_sim_time': str(use_sim_time),
-                'publish_joints': 'true',
-            }.items()
-        ),
-
         DeclareLaunchArgument(
             name='world',
             default_value=world_path,
             description='Gazebo world'
         ),
 
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(description_launch_path),
+            launch_arguments={'use_sim_time': 'true'}.items()
+        ),
+
         ExecuteProcess(
             cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_factory.so',
                  '-s', 'libgazebo_ros_init.so', LaunchConfiguration('world')],
-            output='screen',
+            output='screen'
         ),
 
         Node(
@@ -75,23 +72,22 @@ def generate_launch_description():
         ),
 
         Node(
-            package='marvin_gazebo',
-            executable='command_timeout.py',
-            name='command_timeout'
-        ),
-
-        Node(
             package='robot_localization',
             executable='ekf_node',
             name='ekf_filter_node',
             output='screen',
             parameters=[
-                {'use_sim_time': str(use_sim_time)},
+                {'use_sim_time': use_sim_time},
                 ekf_config_path
             ],
             remappings=[("odometry/filtered", "odom")]
         ),
 
+        Node(
+            package='marvin_gazebo',
+            executable='command_timeout.py',
+            name='command_timeout'
+        ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(joy_launch_path),

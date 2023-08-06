@@ -53,21 +53,21 @@ Visualization Manager:
           Value: true
         camera_link:
           Value: true
-        front_left_wheel_link:
+        front_wheel_left:
           Value: true
-        front_right_wheel_link:
+        front_wheel_right:
           Value: true
         imu_link:
           Value: true
-        laser:
+        lidar:
+          Value: true
+        back_wheel_left:
+          Value: true
+        back_wheel_right:
           Value: true
         map:
           Value: true
         odom:
-          Value: true
-        rear_left_wheel_link:
-          Value: true
-        rear_right_wheel_link:
           Value: true
       Marker Scale: 0.5
       Name: TF
@@ -79,20 +79,13 @@ Visualization Manager:
           odom:
             base_footprint:
               base_link:
-                camera_link:
-                  {}
-                imu_link:
-                  {}
-                laser:
-                  {}
-              front_left_wheel_link:
-                {}
-              front_right_wheel_link:
-                {}
-              rear_left_wheel_link:
-                {}
-              rear_right_wheel_link:
-                {}
+                camera_link: {}
+                front_wheel_left: {}
+                front_wheel_right: {}
+                imu_link: {}
+                lidar: {}
+                back_wheel_left: {}
+                back_wheel_right: {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -127,12 +120,12 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        front_left_wheel_link:
+        front_wheel_left:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        front_right_wheel_link:
+        front_wheel_right:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -141,17 +134,17 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        laser:
+        lidar:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        rear_left_wheel_link:
+        back_wheel_left:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        rear_right_wheel_link:
+        back_wheel_right:
           Alpha: 1
           Show Axes: false
           Show Trail: false

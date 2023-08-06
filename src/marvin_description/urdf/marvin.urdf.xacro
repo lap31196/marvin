@@ -5,13 +5,13 @@ Stephen Brawner (brawner@gmail.com)
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot name="vehicle_model" xmlns:xacro="http://ros.org/wiki/xacro">
 
-    <xacro:include filename="$(find marvin_description)/urdf/sensors/depth_camera.urdf.xacro" />
-    <xacro:include filename="$(find marvin_description)/urdf/sensors/imu.urdf.xacro" />
-    <xacro:include filename="$(find marvin_description)/urdf/sensors/lidar.urdf.xacro" />
-    <xacro:include
-        filename="$(find marvin_description)/urdf/controller/ackermann_drive.urdf.xacro" />
-
-
+    <xacro:include filename="$(find marvin_description)/urdf/controller/ackermann_drive.xacro" />
+    <xacro:include filename="$(find marvin_description)/urdf/sensors/imu.xacro" />
+    <xacro:include filename="$(find marvin_description)/urdf/sensors/lidar.xacro" />
+    <xacro:include filename="$(find marvin_description)/urdf/sensors/camera_right.xacro" />
+    <xacro:include filename="$(find marvin_description)/urdf/sensors/camera_left.xacro" />
+    <xacro:include filename="$(find marvin_description)/urdf/sensors/camera_depth.xacro" />
+    
     <link
         name="base_link">
         <inertial>
@@ -210,7 +210,7 @@ Stephen Brawner (brawner@gmail.com)
     </link>
     <joint
         name="joint_front_handle_left"
-        type="revolute">
+        type="fixed">
         <origin
             xyz="0.13072 0.057509 -0.010582"
             rpy="0 0 0" />
@@ -328,7 +328,7 @@ Stephen Brawner (brawner@gmail.com)
     </link>
     <joint
         name="joint_front_handle_right"
-        type="revolute">
+        type="fixed">
         <origin
             xyz="0.13072 -0.055491 -0.010582"
             rpy="0 0 0" />
@@ -405,113 +405,6 @@ Stephen Brawner (brawner@gmail.com)
             friction="0.1" />
     </joint>
 
-    <link
-        name="camera_left">
-        <inertial>
-            <origin
-                xyz="1.3517E-07 -0.00025619 0.0067093"
-                rpy="0 0 0" />
-            <mass
-                value="0.0050148" />
-            <inertia
-                ixx="3.1349E-07"
-                ixy="3.05E-12"
-                ixz="-9.2173E-12"
-                iyy="3.4979E-07"
-                iyz="-3.6215E-11"
-                izz="2.6383E-07" />
-        </inertial>
-        <visual>
-            <origin
-                xyz="0 0 0"
-                rpy="0 0 0" />
-            <geometry>
-                <mesh
-                    filename="package://marvin_description/meshes/camera_left.STL" />
-            </geometry>
-            <material
-                name="">
-                <color
-                    rgba="0.25098 0.25098 0.25098 1" />
-            </material>
-        </visual>
-        <collision>
-            <origin
-                xyz="0 0 0"
-                rpy="0 0 0" />
-            <geometry>
-                <mesh
-                    filename="package://marvin_description/meshes/camera_left.STL" />
-            </geometry>
-        </collision>
-    </link>
-    <joint
-        name="joint_camera_left"
-        type="fixed">
-        <origin
-            xyz="-0.005 0.048531 0.095"
-            rpy="0 0 0" />
-        <parent
-            link="base_link" />
-        <child
-            link="camera_left" />
-        <axis
-            xyz="0 0 0" />
-    </joint>
-    <link
-        name="camera_right">
-        <inertial>
-            <origin
-                xyz="1.361E-07 -0.00025619 0.0067093"
-                rpy="0 0 0" />
-            <mass
-                value="0.0050148" />
-            <inertia
-                ixx="3.1349E-07"
-                ixy="3.0256E-12"
-                ixz="-9.2702E-12"
-                iyy="3.4979E-07"
-                iyz="-3.6066E-11"
-                izz="2.6383E-07" />
-        </inertial>
-        <visual>
-            <origin
-                xyz="0 0 0"
-                rpy="0 0 0" />
-            <geometry>
-                <mesh
-                    filename="package://marvin_description/meshes/camera_right.STL" />
-            </geometry>
-            <material
-                name="">
-                <color
-                    rgba="0.25098 0.25098 0.25098 1" />
-            </material>
-        </visual>
-        <collision>
-            <origin
-                xyz="0 0 0"
-                rpy="0 0 0" />
-            <geometry>
-                <mesh
-                    filename="package://marvin_description/meshes/camera_right.STL" />
-            </geometry>
-        </collision>
-    </link>
-    <joint
-        name="joint_camera_right"
-        type="fixed">
-        <origin
-            xyz="-0.005 -0.048531 0.095"
-            rpy="0 0 0" />
-        <parent
-            link="base_link" />
-        <child
-            link="camera_right" />
-        <axis
-            xyz="0 0 0" />
-    </joint>
-
     <!-- Robot Footprint -->
     <link name="base_footprint" />
 
@@ -577,7 +470,6 @@ Stephen Brawner (brawner@gmail.com)
         <material>Gazebo/White</material>
     </gazebo>
 
-    <xacro:imu />
     <xacro:lidar
         update_rate="10"
         ray_count="360"
@@ -588,6 +480,4 @@ Stephen Brawner (brawner@gmail.com)
         frame_id="lidar"
         topic_name="base/scan">
     </xacro:lidar>
-    <xacro:depth_camera />
-    <xacro:ackermann_drive_controller />
 </robot>

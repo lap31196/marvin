@@ -48,19 +48,19 @@ def generate_launch_description():
     lc = LaunchContext()
     ros_distro = EnvironmentVariable('ROS_DISTRO')
     slam_param_name = 'slam_params_file'
-    if ros_distro.perform(lc) == 'foxy': 
+    if ros_distro.perform(lc) == 'humble': 
         slam_param_name = 'params_file'
 
     return LaunchDescription([
         DeclareLaunchArgument(
             name='sim', 
-            default_value='false',
+            default_value='true',
             description='Enable use_sime_time to true'
         ),
 
         DeclareLaunchArgument(
             name='rviz', 
-            default_value='false',
+            default_value='true',
             description='Run rviz'
         ),
 
@@ -76,7 +76,7 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(slam_launch_path),
             launch_arguments={
                 'use_sim_time': LaunchConfiguration("sim"),
-                slam_param_name: slam_config_path
+                'params_file': slam_config_path
             }.items()
         ),
 

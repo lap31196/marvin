@@ -1,5 +1,5 @@
+<?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-    <xacro:macro name="imu">
       <link name="imu_link"/>
       
       <joint name="imu_to_base_link" type="fixed">
@@ -31,5 +31,4 @@
         <pose>0 0 0 0 0 0</pose>
         </sensor>
       </gazebo>
-    </xacro:macro>
   </robot>

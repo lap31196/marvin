@@ -1,5 +1,6 @@
 
 import os
+import xacro
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution, EnvironmentVariable
@@ -10,20 +11,26 @@ from launch_ros.descriptions import ParameterValue
 
 
 def generate_launch_description():
+    use_sim_time = LaunchConfiguration('use_sim_time')
+
     package_name = 'marvin_description'
-    urdf_path = os.path.join(FindPackageShare(package=package_name).find(package_name), 'urdf/marvin.urdf.xacro')
+    urdf_path = os.path.join(FindPackageShare(package=package_name).find(
+        package_name), 'urdf/marvin.urdf.xacro')
 
     rviz_config_path = PathJoinSubstitution(
         [FindPackageShare('marvin_description'),
          'rviz', 'description.rviz']
     )
 
+    robot_description_config = xacro.process_file(urdf_path)
+    params = {'robot_description': robot_description_config.toxml(),
+              'use_sim_time': use_sim_time}
+
     return LaunchDescription([
         DeclareLaunchArgument(
-            name='urdf',
-            default_value=urdf_path,
-            description='URDF path'
-        ),
+            'use_sim_time',
+            default_value='false',
+            description='Use sim time if true'),
 
         DeclareLaunchArgument(
             name='publish_joints',
@@ -37,10 +44,12 @@ def generate_launch_description():
             description='Run rviz'
         ),
 
-        DeclareLaunchArgument(
-            name='use_sim_time',
-            default_value='false',
-            description='Use simulation time'
+        Node(
+            package='robot_state_publisher',
+            executable='robot_state_publisher',
+            name='robot_state_publisher',
+            output='screen',
+            parameters=[params]
         ),
 
         Node(
@@ -51,19 +60,6 @@ def generate_launch_description():
             # parameters=[
             #     {'use_sim_time': LaunchConfiguration('use_sim_time')}
             # ] #since galactic use_sim_time gets passed somewhere and rejects this when defined from launch file
-        ),
-
-        Node(
-            package='robot_state_publisher',
-            executable='robot_state_publisher',
-            name='robot_state_publisher',
-            output='screen',
-            parameters=[
-                {
-                    'use_sim_time': LaunchConfiguration('use_sim_time'),
-                    'robot_description': ParameterValue(Command(['xacro ', LaunchConfiguration('urdf')]),value_type=str)
-                }
-            ]
         ),
 
         Node(
