@@ -15,7 +15,7 @@
 import os
 from launch import LaunchDescription
 from launch import LaunchContext
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription,ExecuteProcess
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.conditions import IfCondition
@@ -25,6 +25,11 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
+    gazebo_launch_path = PathJoinSubstitution(
+        [FindPackageShare('marvin_gazebo'), 'launch',
+         'gazebo.launch.py']
+    )
+    
     slam_launch_path = PathJoinSubstitution(
         [FindPackageShare('slam_toolbox'), 'launch', 'online_async_launch.py']
     )
@@ -40,10 +45,6 @@ def generate_launch_description():
     nav2_config_path = PathJoinSubstitution(
         [FindPackageShare('marvin_navigation'), 'config', 'navigation.yaml']    
     )
-
-    rviz_config_path = PathJoinSubstitution(
-        [FindPackageShare('marvin_navigation'), 'rviz', 'marvin_slam.rviz']
-    )
     
     lc = LaunchContext()
     ros_distro = EnvironmentVariable('ROS_DISTRO')
@@ -52,16 +53,16 @@ def generate_launch_description():
         slam_param_name = 'params_file'
 
     return LaunchDescription([
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(gazebo_launch_path),
+            launch_arguments={'use_sim_time': 'true',
+                              'publish_joints':'false',
+                              }.items()
+        ),
         DeclareLaunchArgument(
             name='sim', 
             default_value='true',
             description='Enable use_sime_time to true'
-        ),
-
-        DeclareLaunchArgument(
-            name='rviz', 
-            default_value='true',
-            description='Run rviz'
         ),
 
         IncludeLaunchDescription(
@@ -79,14 +80,5 @@ def generate_launch_description():
                 'params_file': slam_config_path
             }.items()
         ),
-
-        Node(
-            package='rviz2',
-            executable='rviz2',
-            name='rviz2',
-            output='screen',
-            arguments=['-d', rviz_config_path],
-            condition=IfCondition(LaunchConfiguration("rviz")),
-            parameters=[{'use_sim_time': LaunchConfiguration("sim")}]
-        )
+     
     ])
