@@ -78,25 +78,29 @@ Visualization Manager:
         base_footprint:
           Value: true
         base_link:
-          Value: false
+          Value: true
         camera_link:
-          Value: false
-        front_left_wheel_link:
-          Value: false
-        front_right_wheel_link:
-          Value: false
+          Value: true
+        front_handle_left:
+          Value: true
+        front_handle_right:
+          Value: true
+        front_wheel_left:
+          Value: true
+        front_wheel_right:
+          Value: true
         imu_link:
-          Value: false
-        laser:
-          Value: false
+          Value: true
+        lidar:
+          Value: true
+        back_wheel_left:
+          Value: true
+        back_wheel_right:
+          Value: true
         map:
-          Value: false
+          Value: true
         odom:
-          Value: false
-        rear_left_wheel_link:
-          Value: false
-        rear_right_wheel_link:
-          Value: false
+          Value: true
       Marker Scale: 2
       Name: TF
       Show Arrows: true
@@ -104,23 +108,19 @@ Visualization Manager:
       Show Names: false
       Tree:
         map:
+         map:
           odom:
             base_footprint:
               base_link:
-                camera_link:
-                  {}
-                imu_link:
-                  {}
-                laser:
-                  {}
-              front_left_wheel_link:
-                {}
-              front_right_wheel_link:
-                {}
-              rear_left_wheel_link:
-                {}
-              rear_right_wheel_link:
-                {}
+                camera_link: {}
+                front_handle_left: {}
+                front_handle_right: {}
+                front_wheel_left: {}
+                front_wheel_right: {}
+                imu_link: {}
+                lidar: {}
+                back_wheel_left: {}
+                back_wheel_right: {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -548,12 +548,22 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        front_left_wheel_link:
+        front_handle_left:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        front_right_wheel_link:
+        front_handle_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_wheel_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_wheel_right:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -562,17 +572,25 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        laser:
+        lidar:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        rear_left_wheel_link:
+        odom:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        map:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        back_wheel_left:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        rear_right_wheel_link:
+        back_wheel_right:
           Alpha: 1
           Show Axes: false
           Show Trail: false

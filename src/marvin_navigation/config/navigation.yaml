@@ -199,13 +199,13 @@ local_costmap:
           max_obstacle_height: 2.0
           clearing: True
           marking: True
-          data_type: "LaserScan"
+          data_type: "lidar"
         base_scan:
           topic: /base/scan
           max_obstacle_height: 2.0
           clearing: True
           marking: True
-          data_type: "LaserScan"
+          data_type: "lidar"
       voxel3d_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -264,13 +264,13 @@ global_costmap:
           max_obstacle_height: 2.0
           clearing: True
           marking: True
-          data_type: "LaserScan"
+          data_type: "lidar"
         base_scan:
           topic: /base/scan
           max_obstacle_height: 2.0
           clearing: True
           marking: True
-          data_type: "LaserScan"
+          data_type: "lidar"
       voxel3d_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
