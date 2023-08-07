@@ -22,6 +22,11 @@ def generate_launch_description():
          'rviz', 'description.rviz']
     )
 
+    rviz2_config_path = PathJoinSubstitution(
+        [FindPackageShare('marvin_navigation'),
+         'rviz', 'marvin_slam.rviz']
+    )
+
     robot_description_config = xacro.process_file(urdf_path)
     params = {'robot_description': robot_description_config.toxml(),
               'use_sim_time': use_sim_time}
@@ -41,6 +46,12 @@ def generate_launch_description():
         DeclareLaunchArgument(
             name='rviz',
             default_value='true',
+            description='Run rviz'
+        ),
+
+        DeclareLaunchArgument(
+            name='rviz2',
+            default_value='false',
             description='Run rviz'
         ),
 
@@ -69,6 +80,16 @@ def generate_launch_description():
             output='screen',
             arguments=['-d', rviz_config_path],
             condition=IfCondition(LaunchConfiguration("rviz")),
+            parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
+        ),
+
+        Node(
+            package='rviz2',
+            executable='rviz2',
+            name='rviz2',
+            output='screen',
+            arguments=['-d', rviz2_config_path],
+            condition=IfCondition(LaunchConfiguration("rviz2")),
             parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
         )
     ])

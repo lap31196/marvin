@@ -69,6 +69,16 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        front_handle_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_handle_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         imu_link:
           Alpha: 1
           Show Axes: false
@@ -106,6 +116,10 @@ Visualization Manager:
           Value: true
         front_wheel_left:
           Value: true
+        front_handle_left:
+          Value: true
+        front_handle_right:
+          Value: true
         front_wheel_right:
           Value: true
         imu_link:
@@ -127,6 +141,8 @@ Visualization Manager:
             camera_link: {}
             front_wheel_left: {}
             front_wheel_right: {}
+            front_handle_right: {}
+            front_handle_left: {}
             imu_link: {}
             lidar: {}
             back_wheel_left: {}

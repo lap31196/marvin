@@ -15,7 +15,7 @@
 import os
 from launch import LaunchDescription
 from launch import LaunchContext
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription,ExecuteProcess
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, ExecuteProcess
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.conditions import IfCondition
@@ -29,7 +29,7 @@ def generate_launch_description():
         [FindPackageShare('marvin_gazebo'), 'launch',
          'gazebo.launch.py']
     )
-    
+
     slam_launch_path = PathJoinSubstitution(
         [FindPackageShare('slam_toolbox'), 'launch', 'online_async_launch.py']
     )
@@ -43,26 +43,30 @@ def generate_launch_description():
     )
 
     nav2_config_path = PathJoinSubstitution(
-        [FindPackageShare('marvin_navigation'), 'config', 'navigation.yaml']    
+        [FindPackageShare('marvin_navigation'), 'config', 'navigation.yaml']
     )
-    
-    lc = LaunchContext()
-    ros_distro = EnvironmentVariable('ROS_DISTRO')
-    slam_param_name = 'slam_params_file'
-    if ros_distro.perform(lc) == 'humble': 
-        slam_param_name = 'params_file'
 
     return LaunchDescription([
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(gazebo_launch_path),
-            launch_arguments={'use_sim_time': 'true',
-                              'publish_joints':'false',
+            launch_arguments={'use_sim_time': 'false',
+                              'publish_joints': 'false',
+                              'rviz': 'false',
+                              'rviz2': 'true'
                               }.items()
         ),
         DeclareLaunchArgument(
-            name='sim', 
+            name='sim',
             default_value='true',
             description='Enable use_sime_time to true'
+        ),
+
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(slam_launch_path),
+            launch_arguments={
+                'use_sim_time': LaunchConfiguration("sim"),
+                'params_file': slam_config_path,
+            }.items()
         ),
 
         IncludeLaunchDescription(
@@ -71,14 +75,6 @@ def generate_launch_description():
                 'use_sim_time': LaunchConfiguration("sim"),
                 'params_file': nav2_config_path
             }.items()
-        ),
+        )
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(slam_launch_path),
-            launch_arguments={
-                'use_sim_time': LaunchConfiguration("sim"),
-                'params_file': slam_config_path
-            }.items()
-        ),
-     
     ])
