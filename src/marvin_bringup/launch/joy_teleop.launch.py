@@ -22,6 +22,7 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
+    use_sim_time=LaunchConfiguration('use_sim_time')
     joy_config_path = PathJoinSubstitution(
         [FindPackageShare("marvin_bringup"), "config", "joy.yaml"]
     )
