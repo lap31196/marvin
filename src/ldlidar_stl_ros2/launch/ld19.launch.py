@@ -38,7 +38,7 @@ Parameter Description:
 
 def generate_launch_description():
     rviz_config_dir = PathJoinSubstitution(
-        [FindPackageShare('marvin_description'), 'rviz', 'description.rviz'])
+        [FindPackageShare('ldlidar_stl_ros2'), 'rviz', 'description.rviz'])
     return LaunchDescription([
         Node(
             # ldlidar publisher node
