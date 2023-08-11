@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(ldlidar_stl_ros2)
+project(marvin_car_navigation)
 
 # Default to C99
 if (NOT CMAKE_C_STANDARD)
