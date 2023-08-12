@@ -68,9 +68,6 @@ def generate_launch_description():
             executable='joint_state_publisher',
             name='joint_state_publisher',
             condition=IfCondition(LaunchConfiguration("publish_joints"))
-            # parameters=[
-            #     {'use_sim_time': LaunchConfiguration('use_sim_time')}
-            # ] #since galactic use_sim_time gets passed somewhere and rejects this when defined from launch file
         ),
 
         Node(
