@@ -3,7 +3,6 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution, EnvironmentVariable
-from ament_index_python import get_package_share_directory
 
 '''
 parameters=[
