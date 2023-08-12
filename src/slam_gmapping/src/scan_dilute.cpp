@@ -1,4 +1,4 @@
-#include <sensor_msgs/msg/laser_scan__struct.hpp>
+#include <sensor_msgs/msg/laser_scan.hpp>
 #include "rclcpp/rclcpp.hpp"
 
 using std::placeholders::_1;
@@ -23,7 +23,7 @@ private:
         auto scan_msg = std::make_shared<sensor_msgs::msg::LaserScan>();
         scan_msg->header.stamp = this->now();
         scan_msg->header.frame_id = "laser";
-//        scan_msg->header.frame_id = scan->header.frame_id;
+//        scan_smsg->header.frame_id = scan->header.frame_id;
         scan_msg->angle_max = scan->angle_max;
         scan_msg->angle_min = scan->angle_min;
         scan_msg->range_max = scan->range_max;
