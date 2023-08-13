@@ -1,5 +1,5 @@
 /*
- * slam_gmapping
+ * marvin_slam_gmapping
  * Copyright (c) 2008, Willow Garage, Inc.
  *
  * THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE
@@ -21,7 +21,7 @@
 // Created by shivesh on 29/10/18.
 //
 
-#include "slam_gmapping/slam_gmapping.h"
+#include "marvin_slam_gmapping/marvin_slam_gmapping.h"
 
 #include "tf2_ros/create_timer_ros.h"
 
@@ -30,7 +30,7 @@
 using std::placeholders::_1;
 
 SlamGmapping::SlamGmapping() :
-        Node("slam_gmapping"),
+        Node("marvin_slam_gmapping"),
         scan_filter_sub_(nullptr),
         scan_filter_(nullptr),
         laser_count_(0),
@@ -514,7 +514,7 @@ void SlamGmapping::publishTransform() {
 int main(int argc, char *argv[]) {
     rclcpp::init(argc, argv);
 
-    auto slam_gmapping_node = std::make_shared<SlamGmapping>();
-    rclcpp::spin(slam_gmapping_node);
+    auto marvin_slam_gmapping_node = std::make_shared<SlamGmapping>();
+    rclcpp::spin(marvin_slam_gmapping_node);
     return (0);
 }

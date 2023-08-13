@@ -61,7 +61,7 @@ def generate_launch_description():
             ]
         ),
         Node(
-            package='slam_gmapping',
+            package='marvin_slam_gmapping',
             node_namespace='transform',
             node_executable='transform',
             output='screen',
@@ -72,9 +72,9 @@ def generate_launch_description():
         ),
         TimerAction(period=1.0, actions=[
             Node(
-                package='slam_gmapping',
-                node_namespace='slam_gmapping',
-                node_executable='slam_gmapping',
+                package='marvin_slam_gmapping',
+                node_namespace='marvin_slam_gmapping',
+                node_executable='marvin_slam_gmapping',
                 output='screen',
                 parameters=[{'use_sim_time': use_sim_time}]
             ),

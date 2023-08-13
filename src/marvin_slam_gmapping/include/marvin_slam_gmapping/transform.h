@@ -1,7 +1,7 @@
 
 
-#ifndef SLAM_GMAPPING_SLAM_GMAPPING_H_
-#define SLAM_GMAPPING_SLAM_GMAPPING_H_
+#ifndef MARVIN_SLAM_GMAPPING_MARVIN_SLAM_GMAPPING_H_
+#define MARVIN_SLAM_GMAPPING_MARVIN_SLAM_GMAPPING_H_
 
 #include <mutex>
 #include <thread>
@@ -47,4 +47,4 @@ private:
     double tf_delay_;
 };
 
-#endif //SLAM_GMAPPING_SLAM_GMAPPING_H_
+#endif //MARVIN_SLAM_GMAPPING_MARVIN_SLAM_GMAPPING_H_

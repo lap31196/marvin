@@ -1,5 +1,5 @@
 /*
- * slam_gmapping
+ * marvin_MARVIN_SLAM_GMAPPING
  * Copyright (c) 2008, Willow Garage, Inc.
  *
  * THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE
@@ -20,8 +20,8 @@
 // Created by shivesh on 29/10/18.
 //
 
-#ifndef SLAM_GMAPPING_SLAM_GMAPPING_H_
-#define SLAM_GMAPPING_SLAM_GMAPPING_H_
+#ifndef MARVIN_SLAM_GMAPPING_MARVIN_SLAM_GMAPPING_H_
+#define MARVIN_SLAM_GMAPPING_MARVIN_SLAM_GMAPPING_H_
 
 #include <mutex>
 #include <thread>
@@ -151,4 +151,4 @@ private:
     double tf_delay_;
 };
 
-#endif //SLAM_GMAPPING_SLAM_GMAPPING_H_
+#endif //MARVIN_SLAM_GMAPPING_MARVIN_SLAM_GMAPPING_H_

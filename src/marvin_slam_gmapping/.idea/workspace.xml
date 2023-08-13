@@ -2,11 +2,11 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="slam_gmapping" targetName="slam_gmapping_uninstall" />
-      <config projectName="slam_gmapping" targetName="scan_dilute" />
-      <config projectName="slam_gmapping" targetName="transform" />
-      <config projectName="slam_gmapping" targetName="slam_gmapping" />
-      <config projectName="slam_gmapping" targetName="uninstall" />
+      <config projectName="marvin_slam_gmapping" targetName="marvin_slam_gmapping_uninstall" />
+      <config projectName="marvin_slam_gmapping" targetName="scan_dilute" />
+      <config projectName="marvin_slam_gmapping" targetName="transform" />
+      <config projectName="marvin_slam_gmapping" targetName="marvin_slam_gmapping" />
+      <config projectName="marvin_slam_gmapping" targetName="uninstall" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -26,7 +26,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FavoritesManager">
-    <favorites_list name="slam_gmapping" />
+    <favorites_list name="marvin_slam_gmapping" />
   </component>
   <component name="ProjectId" id="28NIqpFItOSgAclz1Vvo0bxqkPW" />
   <component name="ProjectViewState">
@@ -46,35 +46,35 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.scan_dilute">
-    <configuration name="scan_dilute" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_gmapping" TARGET_NAME="scan_dilute" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="slam_gmapping" RUN_TARGET_NAME="scan_dilute">
+    <configuration name="scan_dilute" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="marvin_slam_gmapping" TARGET_NAME="scan_dilute" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="marvin_slam_gmapping" RUN_TARGET_NAME="scan_dilute">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="slam_gmapping" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_gmapping" TARGET_NAME="slam_gmapping" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="slam_gmapping" RUN_TARGET_NAME="slam_gmapping">
+    <configuration name="marvin_slam_gmapping" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="marvin_slam_gmapping" TARGET_NAME="marvin_slam_gmapping" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="marvin_slam_gmapping" RUN_TARGET_NAME="marvin_slam_gmapping">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="slam_gmapping_uninstall" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_gmapping" TARGET_NAME="slam_gmapping_uninstall" CONFIG_NAME="Debug">
+    <configuration name="marvin_slam_gmapping_uninstall" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="marvin_slam_gmapping" TARGET_NAME="marvin_slam_gmapping_uninstall" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="transform" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_gmapping" TARGET_NAME="transform" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="slam_gmapping" RUN_TARGET_NAME="transform">
+    <configuration name="transform" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="marvin_slam_gmapping" TARGET_NAME="transform" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="marvin_slam_gmapping" RUN_TARGET_NAME="transform">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="uninstall" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="slam_gmapping" TARGET_NAME="uninstall" CONFIG_NAME="Debug">
+    <configuration name="uninstall" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="marvin_slam_gmapping" TARGET_NAME="uninstall" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="CMake Application.scan_dilute" />
-      <item itemvalue="CMake Application.slam_gmapping" />
-      <item itemvalue="CMake Application.slam_gmapping_uninstall" />
+      <item itemvalue="CMake Application.marvin_slam_gmapping" />
+      <item itemvalue="CMake Application.marvin_slam_gmapping_uninstall" />
       <item itemvalue="CMake Application.transform" />
       <item itemvalue="CMake Application.uninstall" />
     </list>
