@@ -3,7 +3,7 @@ El siguiente repositorio contiene todos los paquetes necesarios para la instalac
 
 docker run -it --device=/dev/myserial --device=/dev/rplidar --device=/dev/video0 --device=/dev/video1  --device=/dev/video2 --device=/dev/video3 --device=/dev/video4 --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" -v /tmp/.X11-unix:/tmp/.X11-unix marvin:01 /bin/bash  <br />
 
-##instrucciones para descargar librealsense  <br />
+## instrucciones para descargar librealsense  <br />
 sudo mkdir -p /etc/apt/keyrings <br />
 curl -sSf https://librealsense.intel.com/Debian/librealsense.pgp | sudo tee /etc/apt/keyrings/librealsense.pgp > /dev/null <br />
 sudo apt-get install apt-transport-https <br />
