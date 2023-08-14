@@ -1,4 +1,4 @@
-#include <sensor_msgs/msg/laser_scan__struct.hpp>
+#include <sensor_msgs/msg/laser_scan.hpp>
 #include "rclcpp/rclcpp.hpp"
 
 using std::placeholders::_1;
