@@ -11,3 +11,6 @@ echo "deb [signed-by=/etc/apt/keyrings/librealsense.pgp] https://librealsense.in
 sudo tee /etc/apt/sources.list.d/librealsense.list  <br />
 sudo apt-get update  <br />
 sudo apt-get install librealsense2*  <br />
+
+E: Failed to fetch https://librealsense.intel.com/Debian/apt-repo/dists/lsb_release/InRelease  403  Forbidden [IP: 108.157.162.27 443]  <br />
+
