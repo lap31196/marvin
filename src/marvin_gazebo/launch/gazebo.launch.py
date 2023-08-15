@@ -48,12 +48,6 @@ def generate_launch_description():
             description='Gazebo world'
         ),
 
-        ExecuteProcess(
-            cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_factory.so',
-                 '-s', 'libgazebo_ros_init.so', LaunchConfiguration('world')],
-            output='screen'
-        ),
-
         Node(
             package='gazebo_ros',
             executable='spawn_entity.py',
@@ -65,7 +59,11 @@ def generate_launch_description():
                        "-z", '0.08',
                        "-Y", '0.0']
         ),
-
+        ExecuteProcess(
+            cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_factory.so',
+                 '-s', 'libgazebo_ros_init.so', LaunchConfiguration('world')],
+            output='screen'
+        ),
         Node(
             package='marvin_gazebo',
             executable='command_timeout.py',
