@@ -33,6 +33,7 @@ def generate_launch_description():
             executable='joy_linux_node',
             name='joy_linux_node',
             output='screen',
+            parameters=[joy_config_path,{'use_sim_time': use_sim_time}]
         ),
 
         Node(
@@ -40,6 +41,8 @@ def generate_launch_description():
             executable='teleop_node',
             name='teleop_twist_joy_node',
             output='screen',
-            parameters=[joy_config_path]
+            parameters=[joy_config_path,{'use_sim_time': use_sim_time}],
+            remappings=[('/cmd_vel','/cmd_vel_joy')]
+
         )
     ])
