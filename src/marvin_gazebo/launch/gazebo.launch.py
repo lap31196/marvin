@@ -87,9 +87,11 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(description_launch_path),
             launch_arguments={'use_sim_time': 'true',
                               'publish_joints': 'false',
+                              'rviz': 'false',
+                              'rviz2': 'true'
                               }.items()
         ),
- 
+
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(joy_launch_path)
         )

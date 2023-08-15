@@ -1,80 +1,51 @@
-# Copyright (c) 2021 Juan Miguel Jimeno
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http:#www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 import os
+
 from launch import LaunchDescription
-from launch import LaunchContext
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, ExecuteProcess
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.conditions import IfCondition
-from launch.substitutions import EnvironmentVariable
-from launch_ros.substitutions import FindPackageShare
+from launch.actions import DeclareLaunchArgument, LogInfo
+from launch.conditions import UnlessCondition
+from launch.substitutions import LaunchConfiguration, PythonExpression
 from launch_ros.actions import Node
+from ament_index_python.packages import get_package_share_directory
+from nav2_common.launch import HasNodeParams
 
 
 def generate_launch_description():
-    gazebo_launch_path = PathJoinSubstitution(
-        [FindPackageShare('marvin_gazebo'), 'launch',
-         'gazebo.launch.py']
-    )
+    use_sim_time = LaunchConfiguration('use_sim_time')
+    params_file = LaunchConfiguration('params_file')
+    default_params_file = os.path.join(get_package_share_directory("marvin_navigation"),
+                                       'config', 'slam.yaml')
 
-    slam_launch_path = PathJoinSubstitution(
-        [FindPackageShare('slam_toolbox'), 'launch', 'online_async_launch.py']
-    )
+    declare_use_sim_time_argument = DeclareLaunchArgument(
+        'use_sim_time', default_value='true', description='Use simulation/Gazebo clock')
+    declare_params_file_cmd = DeclareLaunchArgument(
+        'params_file',
+        default_value=default_params_file,
+        description='Full path to the ROS2 parameters file to use for the slam_toolbox node')
 
-    slam_config_path = PathJoinSubstitution(
-        [FindPackageShare('marvin_navigation'), 'config', 'slam.yaml']
-    )
+    has_node_params = HasNodeParams(source_file=params_file,
+                                    node_name='slam_toolbox')
 
-    navigation_launch_path = PathJoinSubstitution(
-        [FindPackageShare('nav2_bringup'), 'launch', 'navigation_launch.py']
-    )
+    actual_params_file = PythonExpression(['"', params_file, '" if ', has_node_params,
+                                           ' else "', default_params_file, '"'])
 
-    nav2_config_path = PathJoinSubstitution(
-        [FindPackageShare('marvin_navigation'), 'config', 'navigation.yaml']
+    log_param_change = LogInfo(msg=['provided params_file ',  params_file,
+                                    ' does not contain slam_toolbox parameters. Using default: ',
+                                    default_params_file],
+                               condition=UnlessCondition(has_node_params))
+
+    start_async_slam_toolbox_node = Node(
+        parameters=[actual_params_file,
+                    {'use_sim_time': use_sim_time}
+                    ],
+        package='slam_toolbox',
+        executable='async_slam_toolbox_node',
+        name='slam_toolbox',
+        output='screen'
     )
 
     return LaunchDescription([
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(gazebo_launch_path),
-            launch_arguments={'use_sim_time': 'false',
-                              'publish_joints': 'false',
-                              'rviz': 'false',
-                              'rviz2': 'true'
-                              }.items()
-        ),
-        DeclareLaunchArgument(
-            name='sim',
-            default_value='true',
-            description='Enable use_sime_time to true'
-        ),
-
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(slam_launch_path),
-            launch_arguments={
-                'use_sim_time': LaunchConfiguration("sim"),
-                'slam_params_file': slam_config_path,
-            }.items()
-        ),
-
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(navigation_launch_path),
-            launch_arguments={
-                'use_sim_time': LaunchConfiguration("sim"),
-                'params_file': nav2_config_path
-            }.items()
-        )
-
+        declare_use_sim_time_argument,
+        declare_params_file_cmd,
+        log_param_change,
+        start_async_slam_toolbox_node
     ])
