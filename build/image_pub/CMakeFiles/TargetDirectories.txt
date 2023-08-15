@@ -1,0 +1,12 @@
+/home/marvin/marvin/build/image_pub/CMakeFiles/install/strip.dir
+/home/marvin/marvin/build/image_pub/CMakeFiles/install/local.dir
+/home/marvin/marvin/build/image_pub/CMakeFiles/install.dir
+/home/marvin/marvin/build/image_pub/CMakeFiles/list_install_components.dir
+/home/marvin/marvin/build/image_pub/CMakeFiles/rebuild_cache.dir
+/home/marvin/marvin/build/image_pub/CMakeFiles/edit_cache.dir
+/home/marvin/marvin/build/image_pub/CMakeFiles/test.dir
+/home/marvin/marvin/build/image_pub/CMakeFiles/stereo_image_pub.dir
+/home/marvin/marvin/build/image_pub/CMakeFiles/mono_image_pub.dir
+/home/marvin/marvin/build/image_pub/CMakeFiles/image_pub_uninstall.dir
+/home/marvin/marvin/build/image_pub/CMakeFiles/camera_calibration_pub.dir
+/home/marvin/marvin/build/image_pub/CMakeFiles/uninstall.dir
