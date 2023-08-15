@@ -35,10 +35,6 @@ def generate_launch_description():
     world_path = PathJoinSubstitution(
         [FindPackageShare("marvin_gazebo"), "worlds", "simple.world"]
     )
-    
-    gazebo_params_path=PathJoinSubstitution(
-        [FindPackageShare("marvin_bringup"), "config", "gazebo_params.yaml"]
-    )
 
     description_launch_path = PathJoinSubstitution(
         [FindPackageShare('marvin_description'), 'launch',
@@ -52,18 +48,10 @@ def generate_launch_description():
             description='Gazebo world'
         ),
 
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(description_launch_path),
-            launch_arguments={'use_sim_time': 'true',
-                              'publish_joints':'false',
-                              }.items()
-        ),
-
         ExecuteProcess(
             cmd=['gazebo', '--verbose', '-s', 'libgazebo_ros_factory.so',
                  '-s', 'libgazebo_ros_init.so', LaunchConfiguration('world')],
-            output='screen',
-            #launch_arguments={'extra_gazebo_args':'--ros-args --params-file '+str(gazebo_params_path)}
+            output='screen'
         ),
 
         Node(
@@ -79,6 +67,12 @@ def generate_launch_description():
         ),
 
         Node(
+            package='marvin_gazebo',
+            executable='command_timeout.py',
+            name='command_timeout'
+        ),
+
+        Node(
             package='robot_localization',
             executable='ekf_node',
             name='ekf_filter_node',
@@ -90,12 +84,14 @@ def generate_launch_description():
             remappings=[("odometry/unfiltered", "odom")]
         ),
 
-        Node(
-            package='marvin_gazebo',
-            executable='command_timeout.py',
-            name='command_timeout'
-        ),
 
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(description_launch_path),
+            launch_arguments={'use_sim_time': 'true',
+                              'publish_joints': 'false',
+                              }.items()
+        ),
+ 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(joy_launch_path)
         )
