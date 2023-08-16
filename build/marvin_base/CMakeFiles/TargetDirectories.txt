@@ -1,9 +1,0 @@
-/home/marvin/marvin/build/marvin_base/CMakeFiles/install/strip.dir
-/home/marvin/marvin/build/marvin_base/CMakeFiles/install/local.dir
-/home/marvin/marvin/build/marvin_base/CMakeFiles/install.dir
-/home/marvin/marvin/build/marvin_base/CMakeFiles/list_install_components.dir
-/home/marvin/marvin/build/marvin_base/CMakeFiles/rebuild_cache.dir
-/home/marvin/marvin/build/marvin_base/CMakeFiles/edit_cache.dir
-/home/marvin/marvin/build/marvin_base/CMakeFiles/test.dir
-/home/marvin/marvin/build/marvin_base/CMakeFiles/marvin_base_uninstall.dir
-/home/marvin/marvin/build/marvin_base/CMakeFiles/uninstall.dir
