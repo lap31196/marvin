@@ -98,9 +98,9 @@ def generate_launch_description():
         remappings=[("odometry/unfiltered", "odom")]
     )
 
-    yahboom_joy_node = Node(
+    marvin_joy_node = Node(
         package='marvin_car_ctrl',
-        executable='yahboom_joy_R2',
+        executable='marvin_car_joy_R2',
     )
 
     lidar_node= IncludeLaunchDescription(
@@ -121,5 +121,5 @@ def generate_launch_description():
         base_node,
         imu_filter_node,
         ekf_node,
-        yahboom_joy_node
+        marvin_joy_node
     ])
