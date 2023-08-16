@@ -3,18 +3,18 @@ from ament_index_python.packages import get_package_share_path
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.conditions import IfCondition, UnlessCondition
-from launch.substitutions import Command, LaunchConfiguration
-
+from launch.substitutions import Command, LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
-
+from launch_ros.substitutions import FindPackageShare
 import os
 from ament_index_python.packages import get_package_share_directory
-
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
 print("---------------------robot_type = M.A.R.V.I.N---------------------")
+
+
 def generate_launch_description():
     urdf_tutorial_path = get_package_share_path('marvin_description')
     default_model_path = urdf_tutorial_path / 'urdf/marvin.urdf.xacro'
@@ -28,9 +28,11 @@ def generate_launch_description():
                                      description='Absolute path to rviz config file')
     pub_odom_tf_arg = DeclareLaunchArgument('pub_odom_tf', default_value='false',
                                             description='Whether to publish the tf from the original odom to the base_footprint')
-
     robot_description = ParameterValue(Command(['xacro ', LaunchConfiguration('model')]),
                                        value_type=str)
+    ekf_config_path = PathJoinSubstitution(
+        [FindPackageShare("marvin_base"), "config", "ekf.yaml"]
+    )
 
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
@@ -59,11 +61,11 @@ def generate_launch_description():
         arguments=['-d', LaunchConfiguration('rvizconfig')],
     )
 
-    imu_filter_config = os.path.join(              
+    imu_filter_config = os.path.join(
         get_package_share_directory('yahboomcar_bringup'),
         'param',
         'imu_filter_param.yaml'
-    ) 
+    )
 
     driver_node = Node(
         package='yahboomcar_bringup',
@@ -83,11 +85,14 @@ def generate_launch_description():
         parameters=[imu_filter_config]
     )
 
-    ekf_node = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('robot_localization'), 'launch'),
-            '/ekf_x1_x3_launch.py'])
-    )
+    ekf_node = Node(
+        package='robot_localization',
+        executable='ekf_node',
+        name='ekf_filter_node',
+        output='screen',
+        parameters=[ekf_config_path],
+        remappings=[("odometry/unfiltered", "odom")]
+    ),
 
     yahboom_joy_node = Node(
         package='yahboomcar_ctrl',

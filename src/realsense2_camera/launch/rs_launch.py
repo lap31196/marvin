@@ -22,8 +22,8 @@ from launch.conditions import IfCondition
 
 configurable_parameters = [{'name': 'camera_name',                  'default': 'camera', 'description': 'camera unique name'},
                            {'name': 'serial_no',                    'default': '', 'description': 'choose device by serial number'},
-                           {'name': 'usb_port_id',                  'default': '', 'description': 'choose device by usb port id'},
-                           {'name': 'device_type',                  'default': '', 'description': 'choose device by type'},
+                           {'name': 'usb_port_id',                  'default': '/dev/video4', 'description': 'choose device by usb port id'},
+                           {'name': 'device_type',                  'default': 'd435', 'description': 'choose device by type'},
                            {'name': 'config_file',                  'default': '', 'description': 'yaml config file'},
                            {'name': 'enable_pointcloud',            'default': 'false', 'description': 'enable pointcloud'},
                            {'name': 'unite_imu_method',             'default': '', 'description': '[copy|linear_interpolation]'},                           
