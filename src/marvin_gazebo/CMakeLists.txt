@@ -14,7 +14,7 @@ find_package(rclpy REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 install(
-  DIRECTORY launch rviz worlds
+  DIRECTORY launch rviz worlds config
   DESTINATION share/${PROJECT_NAME}
 )
 ament_python_install_package(${PROJECT_NAME})

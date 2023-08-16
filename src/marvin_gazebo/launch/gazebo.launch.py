@@ -24,6 +24,9 @@ def generate_launch_description():
          'rviz', 'description.rviz']
     )
 
+    gazebo_params_file = os.path.join(get_package_share_directory(
+        'marvin_gazebo'), 'config', 'gazebo_params.yaml')
+
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
@@ -52,6 +55,8 @@ def generate_launch_description():
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(
                 get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
+            launch_arguments={
+                'extra_gazebo_args': '--ros-args --params-file ' + gazebo_params_file}.items()
         ),
 
         Node(
@@ -64,18 +69,6 @@ def generate_launch_description():
                        "-y", '0.0',
                        "-z", '0.08',
                        "-Y", '0.0']
-        ),
-
-        Node(
-            package="controller_manager",
-            executable="spawner",
-            arguments=["diff_cont"],
-        ),
-
-        Node(
-            package="controller_manager",
-            executable="spawner",
-            arguments=["joint_broad"],
         ),
 
         Node(
@@ -92,5 +85,5 @@ def generate_launch_description():
             arguments=['-d', rviz_config_path],
             condition=IfCondition(LaunchConfiguration("rviz_gaz")),
             parameters=[{'use_sim_time': LaunchConfiguration('use_sim_time')}]
-        )
+        ),
     ])
