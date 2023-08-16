@@ -22,8 +22,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        'yahboom_keyboard	= marvin_car_ctrl.yahboom_keyboard:main',
-        'yahboom_joy_R2	= marvin_car_ctrl.yahboom_joy_R2:main',
+        'marvin_car_keyboard	= marvin_car_ctrl.marvin_car_keyboard:main',
+        'marvin_car_joy_R2	= marvin_car_ctrl.marvin_car_joy:main',
         ],
     },
 )

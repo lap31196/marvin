@@ -62,7 +62,7 @@ speedBindings = {
 
 
 
-class Yahboom_Keybord(Node):
+class marvin_car_Keybord(Node):
 	def __init__(self,name):
 		super().__init__(name)
 		self.pub = self.create_publisher(Twist,'cmd_vel',1)
@@ -83,7 +83,7 @@ class Yahboom_Keybord(Node):
 	
 def main():
 	rclpy.init()
-	yahboom_keyboard = Yahboom_Keybord("yahboom_keyboard_ctrl")
+	marvin_car_keyboard = marvin_car_Keybord("marvin_car_keyboard_ctrl")
 	xspeed_switch = True
 	(speed, turn) = (0.2, 1.0)
 	(x, th) = (0, 0)
@@ -93,9 +93,9 @@ def main():
 	twist = Twist()
 	try:
 		print(msg)
-		print(yahboom_keyboard.vels(speed, turn))
+		print(marvin_car_keyboard.vels(speed, turn))
 		while (1):
-			key = yahboom_keyboard.getKey()
+			key = marvin_car_keyboard.getKey()
 			if key=="t" or key == "T": xspeed_switch = not xspeed_switch
 			elif key == "s" or key == "S":
 				print ("stop keyboard control: {}".format(not stop))
@@ -108,13 +108,13 @@ def main():
 				speed = speed * speedBindings[key][0]
 				turn = turn * speedBindings[key][1]
 				count = 0
-				if speed > yahboom_keyboard.linenar_speed_limit: 
-					speed = yahboom_keyboard.linenar_speed_limit
+				if speed > marvin_car_keyboard.linenar_speed_limit: 
+					speed = marvin_car_keyboard.linenar_speed_limit
 					print("Linear speed limit reached!")
-				if turn > yahboom_keyboard.angular_speed_limit: 
-					turn = yahboom_keyboard.angular_speed_limit
+				if turn > marvin_car_keyboard.angular_speed_limit: 
+					turn = marvin_car_keyboard.angular_speed_limit
 					print("Angular speed limit reached!")
-				print(yahboom_keyboard.vels(speed, turn))
+				print(marvin_car_keyboard.vels(speed, turn))
 				if (status == 14): print(msg)
 				status = (status + 1) % 15
 			elif key == ' ': (x, th) = (0, 0)
@@ -125,10 +125,10 @@ def main():
 			if xspeed_switch: twist.linear.x = speed * x
 			else: twist.linear.y = speed * x
 			twist.angular.z = turn * th
-			if not stop: yahboom_keyboard.pub.publish(twist)
-			if stop:yahboom_keyboard.pub.publish(Twist())
+			if not stop: marvin_car_keyboard.pub.publish(twist)
+			if stop:marvin_car_keyboard.pub.publish(Twist())
 	except Exception as e: print(e)
-	finally: yahboom_keyboard.pub.publish(Twist())
-	termios.tcsetattr(sys.stdin, termios.TCSADRAIN, yahboom_keyboard.settings)
-	yahboom_keyboard.destroy_node()
+	finally: marvin_car_keyboard.pub.publish(Twist())
+	termios.tcsetattr(sys.stdin, termios.TCSADRAIN, marvin_car_keyboard.settings)
+	marvin_car_keyboard.destroy_node()
 	rclpy.shutdown()
