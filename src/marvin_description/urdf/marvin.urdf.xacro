@@ -405,7 +405,7 @@ Stephen Brawner (brawner@gmail.com)
             friction="0.1" />
     </joint>
 
-    <!-- Robot Footprint -->
+    <!-- Robot Footprint 
     <link name="base_footprint" />
 
     <joint name="base_joint" type="fixed">
@@ -413,7 +413,7 @@ Stephen Brawner (brawner@gmail.com)
         <child link="base_link" />
         <origin xyz="0 0 0.06" rpy="0 0 0" />
     </joint>
-
+-->
     <gazebo reference="base_link">
         <mu1>200</mu1>
         <mu2>200</mu2>
@@ -478,6 +478,6 @@ Stephen Brawner (brawner@gmail.com)
         min_range="0.21"
         max_range="5.5"
         frame_id="lidar"
-        topic_name="base/scan">
+        topic_name="scan">
     </xacro:lidar>
 </robot>

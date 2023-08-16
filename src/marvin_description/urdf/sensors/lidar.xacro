@@ -89,7 +89,6 @@
                     <output_type>sensor_msgs/LaserScan</output_type>
                     <alwaysOn>true</alwaysOn>
                     <updateRate>${update_rate}</updateRate>
-                    <topicName>${topic_name}</topicName>
                     <frame_name>${frame_id}</frame_name>
                     <output_type>sensor_msgs/LaserScan</output_type>
                 </plugin>

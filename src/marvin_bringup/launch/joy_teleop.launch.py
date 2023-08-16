@@ -22,27 +22,31 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
-    use_sim_time=LaunchConfiguration('use_sim_time')
+    use_sim_time = LaunchConfiguration('use_sim_time')
     joy_config_path = PathJoinSubstitution(
         [FindPackageShare("marvin_bringup"), "config", "joy.yaml"]
     )
 
     return LaunchDescription([
+        DeclareLaunchArgument(
+            'use_sim_time',
+            default_value='false',
+            description='Use sim time if true'
+        ),
         Node(
-            package='joy_linux',
-            executable='joy_linux_node',
-            name='joy_linux_node',
+            package='joy',
+            executable='joy_node',
+            name='joy_node',
             output='screen',
-            parameters=[joy_config_path,{'use_sim_time': use_sim_time}]
+            parameters=[joy_config_path, {'use_sim_time': use_sim_time}]
         ),
 
         Node(
             package='teleop_twist_joy',
             executable='teleop_node',
-            name='teleop_twist_joy_node',
+            name='teleop_node',
             output='screen',
-            parameters=[joy_config_path,{'use_sim_time': use_sim_time}],
-            remappings=[('/cmd_vel','/cmd_vel_joy')]
-
+            parameters=[joy_config_path, {'use_sim_time': use_sim_time}],
+            remappings=[('/cmd_vel', '/cmd_vel_joy')]
         )
     ])
