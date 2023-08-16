@@ -1,4 +1,0 @@
-Invoking command in '/home/marvin/marvin/build/robot_localization': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/build/robot_localization -- -j2 -l2
-Invoked command in '/home/marvin/marvin/build/robot_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/build/robot_localization -- -j2 -l2
-Invoking command in '/home/marvin/marvin/build/robot_localization': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/build/robot_localization
-Invoked command in '/home/marvin/marvin/build/robot_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/build/robot_localization

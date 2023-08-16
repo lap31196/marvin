@@ -1,4 +1,0 @@
-Invoking command in '/home/marvin/marvin/build/image_pub': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/build/image_pub -- -j2 -l2
-Invoked command in '/home/marvin/marvin/build/image_pub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/build/image_pub -- -j2 -l2
-Invoking command in '/home/marvin/marvin/build/image_pub': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/build/image_pub
-Invoked command in '/home/marvin/marvin/build/image_pub' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/build/image_pub

@@ -1,4 +1,0 @@
-Invoking command in '/home/marvin/marvin/build/marvin_bringup': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/build/marvin_bringup -- -j2 -l2
-Invoked command in '/home/marvin/marvin/build/marvin_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/build/marvin_bringup -- -j2 -l2
-Invoking command in '/home/marvin/marvin/build/marvin_bringup': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/build/marvin_bringup
-Invoked command in '/home/marvin/marvin/build/marvin_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/build/marvin_bringup
