@@ -37,6 +37,9 @@ def generate_launch_description():
 
     gazebo_params_file = os.path.join(get_package_share_directory(
         'marvin_sim_gazebo'), 'config', 'gazebo_params.yaml')
+    
+    twist_mux_params = os.path.join(get_package_share_directory('marvin_navigation'),'config','twist_mux.yaml')
+
 
     return LaunchDescription([
         DeclareLaunchArgument(
@@ -73,6 +76,13 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(joy_launch_path),
             launch_arguments={'use_sim_time': 'true'
                               }.items()
+        ),
+
+        Node(
+            package="twist_mux",
+            executable="twist_mux",
+            parameters=[twist_mux_params, {'use_sim_time': True}],
+            remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
         ),
 
         IncludeLaunchDescription(
