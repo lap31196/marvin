@@ -12,7 +12,7 @@ from ament_index_python.packages import get_package_share_directory
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
-print("---------------------robot_type = M.A.R.V.I.N---------------------")
+print("----------------------robot_type = M.A.R.V.I.N---------------------")
 
 
 def generate_launch_description():
