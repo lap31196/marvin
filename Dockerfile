@@ -1,9 +1,4 @@
-#FROM yahboomtechnology/ros-foxy:3.5.3
-#WORKDIR /root/marvin
-#COPY . .
-#RUN chmod +x /root/marvin/install.sh
-#RUN /root/marvin/install.sh
-#RUN colcon build
+FROM yahboomtechnology/ros-foxy:3.5.3
 ARG BASE_IMAGE=dustynv/ros:foxy-pytorch-l4t-r32.5.0
 FROM ${BASE_IMAGE}
 
@@ -146,3 +141,6 @@ CMD ["bash"]
 
 WORKDIR /root/marvin
 COPY . .
+#RUN chmod +x /root/marvin/install.sh
+#RUN /root/marvin/install.sh
+#RUN colcon build
