@@ -2,8 +2,6 @@
 
 # https://www.docker.com/blog/faster-multi-platform-builds-dockerfile-cross-compilation-guide/
 
-FROM nvcr.io/nvidia/cudagl:11.4.2-devel-ubuntu18.04 as amd64_base
-
 FROM nvcr.io/nvidia/l4t-base:r32.5.0 as arm64_base
 
 FROM ${TARGETARCH}_base as dev
