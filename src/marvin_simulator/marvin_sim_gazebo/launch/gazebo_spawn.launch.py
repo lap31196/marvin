@@ -34,9 +34,6 @@ def generate_launch_description():
         [FindPackageShare('marvin_navigation'),
          'rviz', 'marvin_navigation.rviz']
     )
-
-    gazebo_params_file = os.path.join(get_package_share_directory(
-        'marvin_sim_gazebo'), 'config', 'gazebo_params.yaml')
     
     twist_mux_params = os.path.join(get_package_share_directory('marvin_navigation'),'config','twist_mux.yaml')
 
@@ -44,7 +41,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument(
             'use_sim_time',
-            default_value='false',
+            default_value='true',
             description='Use sim time if true'
         ),
 
@@ -83,13 +80,6 @@ def generate_launch_description():
             executable="twist_mux",
             parameters=[twist_mux_params, {'use_sim_time': True}],
             remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
-        ),
-
-        IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([os.path.join(
-                get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
-            launch_arguments={
-                'extra_gazebo_args': '--ros-args --params-file ' + gazebo_params_file}.items()
         ),
 
         Node(
