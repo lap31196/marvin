@@ -4,7 +4,7 @@
 
 FROM nvcr.io/nvidia/l4t-base:r32.5.0 as arm64_base
 
-FROM ${TARGETARCH}_base as dev
+FROM arm64_base as dev
 
 SHELL ["/bin/bash", "-c"] 
 ENV SKIP_ROSDEP=""
