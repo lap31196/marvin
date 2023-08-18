@@ -9,4 +9,9 @@ sudo -y apt-get update
 sudo -y apt-get install librealsense2-dkms
 sudo -y apt-get install librealsense2-utils
 
-sudo apt -y install ros-foxy-gazebo-ros-pkgs
+sudo apt-get -y install ros-foxy-depthimage-to-laserscan
+sudo apt-get -y install ros-foxy-gazebo-ros-pkgs
+sudo apt-get -y install ros-foxy-opencv-python
+sudo apt-get -y install ros-foxy-turtlesim
+sudo apt-get -y install ros-foxy-librealsense2
+sudo apt-get -y install ros-foxy-xacro
