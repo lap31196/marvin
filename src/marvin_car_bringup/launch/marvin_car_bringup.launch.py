@@ -90,7 +90,7 @@ def generate_launch_description():
     lidar_node = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('marvin_car_lidar'), 'launch'),
-            '/ld19.launch.py'])
+            '/ld19_lidar.launch.py'])
     )
 
     return LaunchDescription([

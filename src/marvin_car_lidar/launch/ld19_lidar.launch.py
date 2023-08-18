@@ -15,9 +15,9 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             # ldlidar publisher node
-            package='ldlidar_stl_ros2',
-            node_executable='ldlidar_stl_ros2_node',
-            name='ldlidar_stl_ros2_node',
+            package='marvin_car_lidar',
+            node_executable='marvin_car_lidar_node',
+            name='marvin_car_lidar_node',
             output='screen',
             parameters=[
                 {'product_name': 'LDLiDAR_LD19'},
