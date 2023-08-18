@@ -18,7 +18,5 @@
 
   <export>
     <build_type>ament_cmake</build_type>
-    <gazebo_ros gazebo_model_path="/home/marvin/.gazebo/models"/>
-    <gazebo_ros gazebo_media_path="$/home/marvin/marvin/marvin_simulator/marvin_sim_gazebo/worlds"/>
   </export>
 </package>
