@@ -9,9 +9,9 @@ from launch import LaunchDescription
 from ament_index_python import get_package_share_directory
 
 
-
 def generate_launch_description():
-    use_sim_time = launch.substitutions.LaunchConfiguration('use_sim_time', default='False')
+    use_sim_time = launch.substitutions.LaunchConfiguration(
+        'use_sim_time', default='False')
     return LaunchDescription([
         Node(
             # ldlidar publisher node
@@ -36,9 +36,8 @@ def generate_launch_description():
             node_executable='transform',
             output='screen',
             parameters=[{'parents_frame': "odom",
-                         'child_frame': "laser",
-                         'x': 0.1, 'y': 0.2, 'z': 0.5,
-                         'roll': 0.0, 'pitch': 0.0, 'yaw': 0.0}],
+                         'child_frame': "base_link"
+                         }]
         ),
         TimerAction(period=1.0, actions=[
             Node(
@@ -48,5 +47,5 @@ def generate_launch_description():
                 output='screen',
                 parameters=[{'use_sim_time': use_sim_time}]
             ),
-          ])
+        ])
     ])

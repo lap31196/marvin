@@ -22,7 +22,7 @@ private:
     void scanCb(const sensor_msgs::msg::LaserScan::SharedPtr scan) {
         auto scan_msg = std::make_shared<sensor_msgs::msg::LaserScan>();
         scan_msg->header.stamp = this->now();
-        scan_msg->header.frame_id = "lidar";
+        scan_msg->header.frame_id = "base_link";
 //        scan_msg->header.frame_id = scan->header.frame_id;
         scan_msg->angle_max = scan->angle_max;
         scan_msg->angle_min = scan->angle_min;
