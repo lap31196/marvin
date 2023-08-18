@@ -13,8 +13,8 @@ import os
 def generate_launch_description():
     package_share_path = str(get_package_share_path('marvin_car_nav'))
     package_path = os.path.abspath(os.path.join(
-        package_share_path, "../../../../src/marvin_car_nav"))
-    map_name = "map"
+        package_share_path, "/share/marvin_car_nav"))
+    map_name = "marvin_car"
     default_map_path = os.path.join(package_path, 'maps', map_name)
 
     map_arg = DeclareLaunchArgument(name='map_path', default_value=str(default_map_path),
