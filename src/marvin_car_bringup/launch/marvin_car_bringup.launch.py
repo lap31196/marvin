@@ -28,7 +28,7 @@ def generate_launch_description():
 
     model_arg =   IncludeLaunchDescription(
             PythonLaunchDescriptionSource(default_model_path),
-            launch_arguments={'use_sim_time': 'true',
+            launch_arguments={'rviz': 'true',
                               }.items()
         ),
 
