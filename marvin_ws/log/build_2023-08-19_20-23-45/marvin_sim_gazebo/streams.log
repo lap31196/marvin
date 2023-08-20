@@ -1,0 +1,64 @@
+[0.011s] Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_sim_gazebo -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo
+[0.090s] -- The C compiler identification is GNU 9.4.0
+[0.160s] -- The CXX compiler identification is GNU 9.4.0
+[0.166s] -- Check for working C compiler: /usr/bin/cc
+[0.269s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.269s] -- Detecting C compiler ABI info
+[0.369s] -- Detecting C compiler ABI info - done
+[0.381s] -- Detecting C compile features
+[0.381s] -- Detecting C compile features - done
+[0.385s] -- Check for working CXX compiler: /usr/bin/c++
+[0.484s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.485s] -- Detecting CXX compiler ABI info
+[0.590s] -- Detecting CXX compiler ABI info - done
+[0.603s] -- Detecting CXX compile features
+[0.604s] -- Detecting CXX compile features - done
+[0.606s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.633s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.633s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.852s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[0.886s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.984s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.984s] -- Added test 'lint_cmake' to check CMake code style
+[0.985s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.987s] -- Added test 'xmllint' to check XML markup files
+[0.989s] -- Configuring done
+[0.992s] -- Generating done
+[0.993s] -- Build files have been written to: /home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo
+[1.001s] Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_sim_gazebo -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo
+[1.007s] Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo -- -j2 -l2
+[1.070s] Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo -- -j2 -l2
+[1.116s] Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo
+[1.129s] -- Install configuration: ""
+[1.129s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/launch
+[1.129s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/launch/gazebo_spawn.launch.py
+[1.130s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/worlds
+[1.130s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/worlds/small_city.world
+[1.133s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/worlds/test_city.world
+[1.135s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/worlds/obstacles.world
+[1.136s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/config
+[1.136s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/config/gazebo_params.yaml
+[1.137s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/rviz
+[1.137s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/rviz/description.rviz
+[1.138s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/environment/pythonpath.sh
+[1.138s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/environment/pythonpath.dsv
+[1.138s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/lib/python3.8/site-packages/marvin_sim_gazebo
+[1.139s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/lib/python3.8/site-packages/marvin_sim_gazebo/__init__.py
+[1.170s] Listing '/home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/lib/python3.8/site-packages/marvin_sim_gazebo'...
+[1.171s] Compiling '/home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/lib/python3.8/site-packages/marvin_sim_gazebo/__init__.py'...
+[1.175s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/ament_index/resource_index/package_run_dependencies/marvin_sim_gazebo
+[1.175s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/ament_index/resource_index/parent_prefix_path/marvin_sim_gazebo
+[1.175s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/environment/ament_prefix_path.sh
+[1.175s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/environment/ament_prefix_path.dsv
+[1.175s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/environment/path.sh
+[1.176s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/environment/path.dsv
+[1.176s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/local_setup.bash
+[1.176s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/local_setup.sh
+[1.176s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/local_setup.zsh
+[1.177s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/local_setup.dsv
+[1.177s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/package.dsv
+[1.177s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/ament_index/resource_index/packages/marvin_sim_gazebo
+[1.178s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/cmake/marvin_sim_gazeboConfig.cmake
+[1.178s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/cmake/marvin_sim_gazeboConfig-version.cmake
+[1.178s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo/share/marvin_sim_gazebo/package.xml
+[1.180s] Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo

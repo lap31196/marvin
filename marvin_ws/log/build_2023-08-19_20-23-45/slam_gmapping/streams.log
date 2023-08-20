@@ -1,0 +1,99 @@
+[0.030s] Invoking command in '/home/marvin/marvin/marvin_ws/build/slam_gmapping': AMENT_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:/opt/ros/foxy LD_LIBRARY_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_slam/slam_gmapping -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/slam_gmapping
+[0.131s] -- The C compiler identification is GNU 9.4.0
+[0.212s] -- The CXX compiler identification is GNU 9.4.0
+[0.218s] -- Check for working C compiler: /usr/bin/cc
+[0.309s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.309s] -- Detecting C compiler ABI info
+[0.395s] -- Detecting C compiler ABI info - done
+[0.405s] -- Detecting C compile features
+[0.406s] -- Detecting C compile features - done
+[0.409s] -- Check for working CXX compiler: /usr/bin/c++
+[0.499s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.500s] -- Detecting CXX compiler ABI info
+[0.593s] -- Detecting CXX compiler ABI info - done
+[0.605s] -- Detecting CXX compile features
+[0.605s] -- Detecting CXX compile features - done
+[0.606s]  -fuse-ld=lld -Wl,--disable-new-dtags
+[0.608s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.634s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.635s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.859s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[0.891s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.899s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.988s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.018s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.098s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.147s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.268s] -- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)
+[1.280s] -- Found tf2_ros: 0.13.14 (/opt/ros/foxy/share/tf2_ros/cmake)
+[1.346s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.348s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.349s] -- Looking for pthread.h
+[1.434s] -- Looking for pthread.h - found
+[1.434s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.520s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.520s] -- Looking for pthread_create in pthreads
+[1.597s] -- Looking for pthread_create in pthreads - not found
+[1.597s] -- Looking for pthread_create in pthread
+[1.688s] -- Looking for pthread_create in pthread - found
+[1.689s] -- Found Threads: TRUE  
+[2.168s] -- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[2.177s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[2.180s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[2.207s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.284s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[2.370s] -- Found openslam_gmapping: 0.1.2 (/home/marvin/marvin/marvin_ws/install/openslam_gmapping/share/openslam_gmapping/cmake)
+[2.373s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.457s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.458s] -- Configured cppcheck include dirs: /home/marvin/marvin/marvin_ws/src/marvin_slam/slam_gmapping/include
+[2.458s] -- Configured cppcheck exclude dirs and/or files: 
+[2.459s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.460s] -- Added test 'lint_cmake' to check CMake code style
+[2.461s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.462s] -- Added test 'uncrustify' to check C / C++ code style
+[2.462s] -- Configured uncrustify additional arguments: 
+[2.463s] -- Added test 'xmllint' to check XML markup files
+[2.468s] -- Configuring done
+[2.497s] -- Generating done
+[2.500s] -- Build files have been written to: /home/marvin/marvin/marvin_ws/build/slam_gmapping
+[2.514s] Invoked command in '/home/marvin/marvin/marvin_ws/build/slam_gmapping' returned '0': AMENT_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:/opt/ros/foxy LD_LIBRARY_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping/lib:${LD_LIBRARY_PATH} /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_slam/slam_gmapping -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/slam_gmapping
+[2.515s] Invoking command in '/home/marvin/marvin/marvin_ws/build/slam_gmapping': AMENT_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:/opt/ros/foxy LD_LIBRARY_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/slam_gmapping -- -j2 -l2
+[2.578s] [35m[1mScanning dependencies of target transform[0m
+[2.578s] [35m[1mScanning dependencies of target scan_dilute[0m
+[2.640s] [ 16%] [32mBuilding CXX object CMakeFiles/scan_dilute.dir/src/scan_dilute.cpp.o[0m
+[2.658s] [ 33%] [32mBuilding CXX object CMakeFiles/transform.dir/src/transform.cpp.o[0m
+[7.066s] [ 50%] [32m[1mLinking CXX executable transform[0m
+[7.336s] [ 50%] Built target transform
+[7.353s] [35m[1mScanning dependencies of target slam_gmapping[0m
+[7.427s] [ 66%] [32mBuilding CXX object CMakeFiles/slam_gmapping.dir/src/slam_gmapping.cpp.o[0m
+[8.425s] [ 83%] [32m[1mLinking CXX executable scan_dilute[0m
+[8.760s] [ 83%] Built target scan_dilute
+[16.064s] [100%] [32m[1mLinking CXX executable slam_gmapping[0m
+[16.554s] [100%] Built target slam_gmapping
+[16.570s] Invoked command in '/home/marvin/marvin/marvin_ws/build/slam_gmapping' returned '0': AMENT_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:/opt/ros/foxy LD_LIBRARY_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/slam_gmapping -- -j2 -l2
+[16.614s] Invoking command in '/home/marvin/marvin/marvin_ws/build/slam_gmapping': AMENT_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:/opt/ros/foxy LD_LIBRARY_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/slam_gmapping
+[16.629s] -- Install configuration: ""
+[16.630s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/lib/slam_gmapping/slam_gmapping
+[16.635s] -- Set runtime path of "/home/marvin/marvin/marvin_ws/install/slam_gmapping/lib/slam_gmapping/slam_gmapping" to ""
+[16.635s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/lib/slam_gmapping/transform
+[16.637s] -- Set runtime path of "/home/marvin/marvin/marvin_ws/install/slam_gmapping/lib/slam_gmapping/transform" to ""
+[16.637s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/lib/slam_gmapping/scan_dilute
+[16.640s] -- Set runtime path of "/home/marvin/marvin/marvin_ws/install/slam_gmapping/lib/slam_gmapping/scan_dilute" to ""
+[16.640s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/launch
+[16.640s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/launch/slam_gmapping.launch.py
+[16.645s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/ament_index/resource_index/package_run_dependencies/slam_gmapping
+[16.645s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/ament_index/resource_index/parent_prefix_path/slam_gmapping
+[16.646s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/environment/ament_prefix_path.sh
+[16.646s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/environment/ament_prefix_path.dsv
+[16.648s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/environment/path.sh
+[16.648s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/environment/path.dsv
+[16.648s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/local_setup.bash
+[16.649s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/local_setup.sh
+[16.650s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/local_setup.zsh
+[16.650s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/local_setup.dsv
+[16.651s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/package.dsv
+[16.651s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/ament_index/resource_index/packages/slam_gmapping
+[16.652s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/cmake/slam_gmappingConfig.cmake
+[16.652s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/cmake/slam_gmappingConfig-version.cmake
+[16.653s] -- Installing: /home/marvin/marvin/marvin_ws/install/slam_gmapping/share/slam_gmapping/package.xml
+[16.658s] Invoked command in '/home/marvin/marvin/marvin_ws/build/slam_gmapping' returned '0': AMENT_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping:/opt/ros/foxy LD_LIBRARY_PATH=/home/marvin/marvin/marvin_ws/install/openslam_gmapping/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/slam_gmapping

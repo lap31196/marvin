@@ -1,0 +1,71 @@
+running egg_info
+creating ../../build/marvin_car_nav/marvin_car_nav.egg-info
+writing ../../build/marvin_car_nav/marvin_car_nav.egg-info/PKG-INFO
+writing dependency_links to ../../build/marvin_car_nav/marvin_car_nav.egg-info/dependency_links.txt
+writing entry points to ../../build/marvin_car_nav/marvin_car_nav.egg-info/entry_points.txt
+writing requirements to ../../build/marvin_car_nav/marvin_car_nav.egg-info/requires.txt
+writing top-level names to ../../build/marvin_car_nav/marvin_car_nav.egg-info/top_level.txt
+writing manifest file '../../build/marvin_car_nav/marvin_car_nav.egg-info/SOURCES.txt'
+reading manifest file '../../build/marvin_car_nav/marvin_car_nav.egg-info/SOURCES.txt'
+writing manifest file '../../build/marvin_car_nav/marvin_car_nav.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/marvin/marvin/marvin_ws/build/marvin_car_nav/build
+creating /home/marvin/marvin/marvin_ws/build/marvin_car_nav/build/lib
+creating /home/marvin/marvin/marvin_ws/build/marvin_car_nav/build/lib/marvin_car_nav
+copying marvin_car_nav/scan_filter.py -> /home/marvin/marvin/marvin_ws/build/marvin_car_nav/build/lib/marvin_car_nav
+copying marvin_car_nav/__init__.py -> /home/marvin/marvin/marvin_ws/build/marvin_car_nav/build/lib/marvin_car_nav
+running install
+running install_lib
+creating /home/marvin/marvin/marvin_ws/install/marvin_car_nav/lib/python3.8/site-packages/marvin_car_nav
+copying /home/marvin/marvin/marvin_ws/build/marvin_car_nav/build/lib/marvin_car_nav/scan_filter.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/lib/python3.8/site-packages/marvin_car_nav
+copying /home/marvin/marvin/marvin_ws/build/marvin_car_nav/build/lib/marvin_car_nav/__init__.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/lib/python3.8/site-packages/marvin_car_nav
+byte-compiling /home/marvin/marvin/marvin_ws/install/marvin_car_nav/lib/python3.8/site-packages/marvin_car_nav/scan_filter.py to scan_filter.cpython-38.pyc
+byte-compiling /home/marvin/marvin/marvin_ws/install/marvin_car_nav/lib/python3.8/site-packages/marvin_car_nav/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/ament_index
+creating /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/ament_index/resource_index
+creating /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/ament_index/resource_index/packages
+copying resource/marvin_car_nav -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/ament_index/resource_index/packages
+copying package.xml -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav
+creating /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/rtabmap_sync_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/display_rtabmap_nav_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/cartographer_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/map_gmapping_4ros_s2_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/display_map_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/laser_bringup_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/save_map_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/rtabmap_viz_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/rtabmap_nav_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/occupancy_grid_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/display_rtabmap_map_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/navigation_teb_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/navigation_dwa_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/map_gmapping_a1_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/navigation_rtabmap_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/map_cartographer_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/display_nav_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/map_rtabmap_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/map_gmapping_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+copying launch/rtabmap_localization_launch.py -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/launch
+creating /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/rviz
+copying rviz/rtabmap_nav.rviz -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/rviz
+copying rviz/nav.rviz -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/rviz
+copying rviz/map.rviz -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/rviz
+copying rviz/rtabmap_map.rviz -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/rviz
+creating /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/params
+copying params/lds_2d.lua -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/params
+copying params/teb_nav_params.yaml -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/params
+copying params/rtabmap_nav_params.yaml -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/params
+copying params/dwa_nav_params.yaml -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/params
+creating /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/maps
+copying maps/marvin_car.yaml -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/maps
+copying maps/marvin_car2.pgm -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/maps
+copying maps/marvin_car.pgm -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/maps
+copying maps/marvin_car2.yaml -> /home/marvin/marvin/marvin_ws/install/marvin_car_nav/share/marvin_car_nav/maps
+running install_egg_info
+Copying ../../build/marvin_car_nav/marvin_car_nav.egg-info to /home/marvin/marvin/marvin_ws/install/marvin_car_nav/lib/python3.8/site-packages/marvin_car_nav-0.0.0-py3.8.egg-info
+running install_scripts
+Installing scan_filter script to /home/marvin/marvin/marvin_ws/install/marvin_car_nav/lib/marvin_car_nav
+writing list of installed files to '/home/marvin/marvin/marvin_ws/build/marvin_car_nav/install.log'

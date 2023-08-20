@@ -1,0 +1,8 @@
+[console_scripts]
+Ackman_driver_R2 = marvin_car_bringup.Ackman_driver_R2:main
+calibrate_angular_R2 = marvin_car_bringup.calibrate_angular_R2:main
+calibrate_linear_R2 = marvin_car_bringup.calibrate_linear_R2:main
+patrol_4ROS = marvin_car_bringup.patrol_4ROS:main
+patrol_4ROS_R2 = marvin_car_bringup.patrol_4ROS_R2:main
+patrol_a1_R2 = marvin_car_bringup.patrol_a1_R2:main
+

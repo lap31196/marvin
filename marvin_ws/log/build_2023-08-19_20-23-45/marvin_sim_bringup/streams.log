@@ -1,0 +1,52 @@
+[0.019s] Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_bringup': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_sim_bringup -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/marvin_sim_bringup
+[0.113s] -- The C compiler identification is GNU 9.4.0
+[0.180s] -- The CXX compiler identification is GNU 9.4.0
+[0.187s] -- Check for working C compiler: /usr/bin/cc
+[0.276s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.280s] -- Detecting C compiler ABI info
+[0.370s] -- Detecting C compiler ABI info - done
+[0.382s] -- Detecting C compile features
+[0.382s] -- Detecting C compile features - done
+[0.385s] -- Check for working CXX compiler: /usr/bin/c++
+[0.491s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.493s] -- Detecting CXX compiler ABI info
+[0.601s] -- Detecting CXX compiler ABI info - done
+[0.615s] -- Detecting CXX compile features
+[0.616s] -- Detecting CXX compile features - done
+[0.619s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.648s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.648s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.862s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.938s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.938s] -- Added test 'lint_cmake' to check CMake code style
+[0.939s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[0.940s] -- Added test 'xmllint' to check XML markup files
+[0.943s] -- Configuring done
+[0.945s] -- Generating done
+[0.946s] -- Build files have been written to: /home/marvin/marvin/marvin_ws/build/marvin_sim_bringup
+[0.954s] Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_sim_bringup -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/marvin_sim_bringup
+[0.955s] Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_bringup': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/marvin_sim_bringup -- -j2 -l2
+[1.001s] Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/marvin_sim_bringup -- -j2 -l2
+[1.038s] Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_bringup': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/marvin_sim_bringup
+[1.053s] -- Install configuration: ""
+[1.053s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/launch
+[1.053s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/launch/joy_teleop.launch.py
+[1.054s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/config
+[1.054s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/config/joy.yaml
+[1.055s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/config/twist_mux.yaml
+[1.056s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/ament_index/resource_index/package_run_dependencies/marvin_sim_bringup
+[1.057s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/ament_index/resource_index/parent_prefix_path/marvin_sim_bringup
+[1.057s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/environment/ament_prefix_path.sh
+[1.057s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/environment/ament_prefix_path.dsv
+[1.058s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/environment/path.sh
+[1.058s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/environment/path.dsv
+[1.058s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/local_setup.bash
+[1.059s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/local_setup.sh
+[1.059s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/local_setup.zsh
+[1.059s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/local_setup.dsv
+[1.060s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/package.dsv
+[1.060s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/ament_index/resource_index/packages/marvin_sim_bringup
+[1.060s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/cmake/marvin_sim_bringupConfig.cmake
+[1.061s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/cmake/marvin_sim_bringupConfig-version.cmake
+[1.061s] -- Installing: /home/marvin/marvin/marvin_ws/install/marvin_sim_bringup/share/marvin_sim_bringup/package.xml
+[1.068s] Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_bringup' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/marvin_sim_bringup

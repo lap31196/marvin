@@ -1,0 +1,6 @@
+Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_sim_gazebo -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo
+Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_sim_gazebo -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/marvin_sim_gazebo
+Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo -- -j2 -l2
+Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo -- -j2 -l2
+Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo
+Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/marvin_sim_gazebo
