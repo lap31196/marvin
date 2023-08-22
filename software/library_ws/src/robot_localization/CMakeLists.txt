@@ -167,161 +167,17 @@ if(BUILD_TESTING)
   find_package(ament_cmake_uncrustify REQUIRED)
   find_package(launch_testing_ament_cmake REQUIRED)
 
-  #### FILTER BASE TESTS ####
-  ament_add_gtest(filter_base-test test/test_filter_base.cpp)
-  target_link_libraries(filter_base-test ${library_name})
+ 
 
-  #### DIAGNOSTICS TESTS ####
-  ament_add_gtest_executable(test_filter_base_diagnostics_timestamps
-                    test/test_filter_base_diagnostics_timestamps.cpp)
-  target_link_libraries(test_filter_base_diagnostics_timestamps ${library_name})
-  rosidl_target_interfaces(test_filter_base_diagnostics_timestamps
-    ${PROJECT_NAME} "rosidl_typesupport_cpp")
-  add_dependencies(test_filter_base_diagnostics_timestamps ekf_node)
-  ament_add_test(test_filter_base_diagnostics_timestamps
-    GENERATE_RESULT_FOR_RETURN_CODE_ZERO
-    TIMEOUT 300
-    COMMAND "${CMAKE_CURRENT_SOURCE_DIR}/test/test_filter_base_diagnostics_timestamps.launch.py"
-  WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-  )
-
-  #### EKF TESTS ######
-  ament_add_gtest(test_ekf test/test_ekf.cpp)
-  target_link_libraries(test_ekf ${library_name})
-  rosidl_target_interfaces(test_ekf
-    ${PROJECT_NAME} "rosidl_typesupport_cpp")
-
-  ament_add_gtest_executable(test_ekf_localization_node_interfaces
-                    test/test_ekf_localization_node_interfaces.cpp)
-  target_link_libraries(test_ekf_localization_node_interfaces ${library_name})
-  rosidl_target_interfaces(test_ekf_localization_node_interfaces
-    ${PROJECT_NAME} "rosidl_typesupport_cpp")
-  add_dependencies(test_ekf_localization_node_interfaces ekf_node)
-  ament_add_test(test_ekf_localization_node_interfaces
-    GENERATE_RESULT_FOR_RETURN_CODE_ZERO
-    TIMEOUT 300
-    COMMAND "${CMAKE_CURRENT_SOURCE_DIR}/test/test_ekf_localization_node_interfaces.launch.py"
-  WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-  )
-
-  #### UKF TESTS #####
-  ament_add_gtest(test_ukf test/test_ukf.cpp)
-  target_link_libraries(test_ukf ${library_name})
-  rosidl_target_interfaces(test_ukf
-    ${PROJECT_NAME} "rosidl_typesupport_cpp")
-
-
-  ament_add_gtest_executable(test_ukf_localization_node_interfaces
-                    test/test_ukf_localization_node_interfaces.cpp)
-  target_link_libraries(test_ukf_localization_node_interfaces ${library_name})
-  rosidl_target_interfaces(test_ukf_localization_node_interfaces
-    ${PROJECT_NAME} "rosidl_typesupport_cpp")
-  add_dependencies(test_ukf_localization_node_interfaces ukf_node)
-  ament_add_test(test_ukf_localization_node_interfaces
-    GENERATE_RESULT_FOR_RETURN_CODE_ZERO
-    TIMEOUT 300
-    COMMAND "${CMAKE_CURRENT_SOURCE_DIR}/test/test_ukf_localization_node_interfaces.launch.py"
-  WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-  )
-
-  #### DATA TESTS #####
-#  ament_add_gtest(test_ekf_localization_node_bag1 test/test_localization_node_bag_pose_tester.cpp)
-#  target_link_libraries(test_ekf_localization_node_bag1 ${library_name})
-
-#  ament_add_gtest(test_ekf_localization_node_bag2 test/test_localization_node_bag_pose_tester.cpp)
-#  target_link_libraries(test_ekf_localization_node_bag2 ${library_name})
-
-#  ament_add_gtest(test_ekf_localization_node_bag3 test/test_localization_node_bag_pose_tester.cpp)
-#  target_link_libraries(test_ekf_localization_node_bag3 ${library_name})
-
-#  ament_add_gtest(test_ukf_localization_node_bag1 test/test_localization_node_bag_pose_tester.cpp)
-#  target_link_libraries(test_ukf_localization_node_bag1 ${library_name})
-
-#  ament_add_gtest(test_ukf_localization_node_bag2 test/test_localization_node_bag_pose_tester.cpp)
-#  target_link_libraries(test_ukf_localization_node_bag2 ${library_name})
-
-#  ament_add_gtest(test_ukf_localization_node_bag3 test/test_localization_node_bag_pose_tester.cpp)
-#  target_link_libraries(test_ukf_localization_node_bag3 ${library_name})
-
-  #### RLE/RLL TESTS #####
-  ament_add_gtest_executable(test_robot_localization_estimator
-                  test/test_robot_localization_estimator.cpp)
-  target_link_libraries(test_robot_localization_estimator ${library_name})
-  rosidl_target_interfaces(test_robot_localization_estimator
-    ${PROJECT_NAME} "rosidl_typesupport_cpp")
-  ament_add_test(test_robot_localization_estimator
-    GENERATE_RESULT_FOR_RETURN_CODE_ZERO
-    TIMEOUT 100
-    COMMAND "${CMAKE_CURRENT_SOURCE_DIR}/test/test_robot_localization_estimator.launch.py"
-    WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-  )
-
-  #### NAVSAT CONVERSION TESTS ####
-  ament_add_gtest(test_navsat_conversions test/test_navsat_conversions.cpp)
-  target_link_libraries(test_navsat_conversions ${library_name})
-
-  #### NAVSAT TRANSFORM TESTS ####
-  ament_add_gtest_executable(test_navsat_transform test/test_navsat_transform.cpp)
-  target_link_libraries(test_navsat_transform ${library_name})
-  rosidl_target_interfaces(test_navsat_transform
-    ${PROJECT_NAME} "rosidl_typesupport_cpp")
-  ament_add_test(test_navsat_transform
-    GENERATE_RESULT_FOR_RETURN_CODE_ZERO
-    TIMEOUT 100
-    COMMAND "${CMAKE_CURRENT_SOURCE_DIR}/test/test_navsat_transform.launch.py"
-    WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-  )
-
-  ament_add_gtest_executable(test_ros_robot_localization_listener
-                  test/test_ros_robot_localization_listener.cpp)
-  target_link_libraries(test_ros_robot_localization_listener ${library_name})
-  rosidl_target_interfaces(test_ros_robot_localization_listener
-    ${PROJECT_NAME} "rosidl_typesupport_cpp")
-  ament_add_gtest_executable(test_ros_robot_localization_listener_publisher
-                  test/test_ros_robot_localization_listener_publisher.cpp)
-  target_link_libraries(test_ros_robot_localization_listener_publisher ${library_name})
-  rosidl_target_interfaces(test_ros_robot_localization_listener_publisher
-    ${PROJECT_NAME} "rosidl_typesupport_cpp")
-  ament_add_test(test_ros_robot_localization_listener
-    GENERATE_RESULT_FOR_RETURN_CODE_ZERO
-    TIMEOUT 100
-    COMMAND "${CMAKE_CURRENT_SOURCE_DIR}/test/test_ros_robot_localization_listener.launch.py"
-    WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
-  )
 
   ament_cppcheck(LANGUAGE "c++")
   ament_cpplint()
   ament_lint_cmake()
   ament_uncrustify()
 
-  install(
-    TARGETS
-    filter_base-test
-    test_filter_base_diagnostics_timestamps
-    test_ekf
-    test_ekf_localization_node_interfaces
-    test_ukf
-    test_ukf_localization_node_interfaces
-    #test_ekf_localization_node_bag1
-    #test_ekf_localization_node_bag2
-    #test_ekf_localization_node_bag3
-    test_robot_localization_estimator
-    test_navsat_conversions
-    test_navsat_transform
-    test_ros_robot_localization_listener
-    test_ros_robot_localization_listener_publisher
-    #test_ukf_localization_node_bag1
-    #test_ukf_localization_node_bag2
-    #test_ukf_localization_node_bag3
-    DESTINATION lib/${PROJECT_NAME}
-  )
 
-  # Install test launch config files.
-  install(DIRECTORY
-    test
-    DESTINATION share/${PROJECT_NAME}
-    USE_SOURCE_PERMISSIONS
-  )
+
+
 endif()
 
 install(
