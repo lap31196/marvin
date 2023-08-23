@@ -1,0 +1,593 @@
+[0.022s] Invoking command in '/root/marvin/software/library_ws/build/robot_localization': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/marvin/software/library_ws/src/robot_localization -DCMAKE_INSTALL_PREFIX=/root/marvin/software/library_ws/install/robot_localization
+[0.216s] -- The C compiler identification is GNU 9.4.0
+[0.352s] -- The CXX compiler identification is GNU 9.4.0
+[0.373s] -- Check for working C compiler: /usr/bin/cc
+[0.455s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.458s] -- Detecting C compiler ABI info
+[0.536s] -- Detecting C compiler ABI info - done
+[0.547s] -- Detecting C compile features
+[0.548s] -- Detecting C compile features - done
+[0.554s] -- Check for working CXX compiler: /usr/bin/c++
+[0.638s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.639s] -- Detecting CXX compiler ABI info
+[0.725s] -- Detecting CXX compiler ABI info - done
+[0.736s] -- Detecting CXX compile features
+[0.737s] -- Detecting CXX compile features - done
+[0.737s] -- robot_localization: You did not request a specific build type: selecting 'RelWithDebInfo'.
+[0.747s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.784s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.784s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.017s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.115s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.131s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.263s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.297s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.406s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.504s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.507s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.511s] -- Looking for pthread.h
+[1.610s] -- Looking for pthread.h - found
+[1.610s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.706s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.706s] -- Looking for pthread_create in pthreads
+[1.775s] -- Looking for pthread_create in pthreads - not found
+[1.775s] -- Looking for pthread_create in pthread
+[1.850s] -- Looking for pthread_create in pthread - found
+[1.851s] -- Found Threads: TRUE  
+[2.069s] -- Found diagnostic_msgs: 2.0.5 (/opt/ros/foxy/share/diagnostic_msgs/cmake)
+[2.116s] -- Found diagnostic_updater: 3.1.2 (/opt/ros/foxy/share/diagnostic_updater/cmake)
+[2.141s] -- Found geographic_msgs: 1.0.4 (/opt/ros/foxy/share/geographic_msgs/cmake)
+[2.323s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[2.406s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[2.425s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.507s] -- Found std_srvs: 2.0.5 (/opt/ros/foxy/share/std_srvs/cmake)
+[2.531s] -- Found tf2: 0.13.14 (/opt/ros/foxy/share/tf2/cmake)
+[2.548s] -- Found tf2_eigen: 0.13.14 (/opt/ros/foxy/share/tf2_eigen/cmake)
+[2.953s] -- Found tf2_geometry_msgs: 0.13.14 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[2.966s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[3.013s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0")  
+[3.017s] -- Found yaml_cpp_vendor: 7.0.3 (/opt/ros/foxy/share/yaml_cpp_vendor/cmake)
+[3.018s] -- Setting yaml-cpp_DIR to: '/opt/ros/foxy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/lib/cmake/yaml-cpp'
+[3.023s] -- Found GeographicLib: /usr/lib/x86_64-linux-gnu  
+[3.046s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[3.307s] -- Found ament_cmake_cppcheck: 0.9.8 (/opt/ros/foxy/share/ament_cmake_cppcheck/cmake)
+[3.312s] -- Found ament_cmake_cpplint: 0.9.8 (/opt/ros/foxy/share/ament_cmake_cpplint/cmake)
+[3.316s] -- Found ament_cmake_uncrustify: 0.9.8 (/opt/ros/foxy/share/ament_cmake_uncrustify/cmake)
+[3.321s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[3.702s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.869s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.898s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[3.901s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[3.931s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[3.931s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.931s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[3.931s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[3.952s] -- Found PythonExtra: .so  
+[4.056s] -- Found ament_cmake_flake8: 0.9.8 (/opt/ros/foxy/share/ament_cmake_flake8/cmake)
+[4.060s] -- Found ament_cmake_pep257: 0.9.8 (/opt/ros/foxy/share/ament_cmake_pep257/cmake)
+[4.079s] -- Found ament_cmake_lint_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake_lint_cmake/cmake)
+[4.084s] -- Found launch_testing_ament_cmake: 0.10.10 (/opt/ros/foxy/share/launch_testing_ament_cmake/cmake)
+[4.109s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.109s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[4.109s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[4.117s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[4.122s] -- Check if compiler accepts -pthread
+[4.223s] -- Check if compiler accepts -pthread - yes
+[4.271s] -- Configuring done
+[4.705s] -- Generating done
+[4.711s] -- Build files have been written to: /root/marvin/software/library_ws/build/robot_localization
+[4.729s] Invoked command in '/root/marvin/software/library_ws/build/robot_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/marvin/software/library_ws/src/robot_localization -DCMAKE_INSTALL_PREFIX=/root/marvin/software/library_ws/install/robot_localization
+[4.733s] Invoking command in '/root/marvin/software/library_ws/build/robot_localization': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/marvin/software/library_ws/build/robot_localization -- -j6 -l6
+[4.790s] [35m[1mScanning dependencies of target gtest[0m
+[4.791s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[4.792s] [35m[1mScanning dependencies of target gtest_main[0m
+[4.792s] [35m[1mScanning dependencies of target robot_localization__cpp[0m
+[4.808s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[4.832s] [  3%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[4.835s] [  4%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[5.624s] [  4%] Built target robot_localization__cpp
+[5.654s] [  5%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[5.709s] [  6%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.710s] [35m[1mScanning dependencies of target robot_localization__rosidl_generator_c[0m
+[5.711s] [  7%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[5.831s] [  7%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/from_ll__functions.c.o[0m
+[6.256s] [  8%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/get_state__functions.c.o[0m
+[6.310s] [35m[1mScanning dependencies of target robot_localization__rosidl_typesupport_cpp[0m
+[6.325s] [  8%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[6.432s] [  9%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/from_ll__type_support.cpp.o[0m
+[6.472s] [  9%] Built target gtest_main
+[6.535s] [ 10%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/get_state__type_support.cpp.o[0m
+[6.552s] [ 11%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/set_datum__functions.c.o[0m
+[6.737s] [35m[1mScanning dependencies of target robot_localization__rosidl_typesupport_introspection_cpp[0m
+[6.750s] [35m[1mScanning dependencies of target robot_localization__rosidl_typesupport_fastrtps_cpp[0m
+[6.753s] [ 12%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/set_pose__functions.c.o[0m
+[6.864s] [ 12%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/from_ll__type_support.cpp.o[0m
+[6.956s] [ 13%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/set_datum__type_support.cpp.o[0m
+[6.976s] [ 14%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/from_ll__type_support.cpp.o[0m
+[7.020s] [ 15%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/toggle_filter_processing__functions.c.o[0m
+[7.122s] [ 16%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/set_pose__type_support.cpp.o[0m
+[7.314s] [ 17%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_generator_c.dir/rosidl_generator_c/robot_localization/srv/detail/to_ll__functions.c.o[0m
+[7.786s] [ 18%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/get_state__type_support.cpp.o[0m
+[7.796s] [ 19%] [32m[1mLinking C shared library librobot_localization__rosidl_generator_c.so[0m
+[7.807s] [ 20%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/toggle_filter_processing__type_support.cpp.o[0m
+[7.909s] [ 20%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robot_localization/srv/to_ll__type_support.cpp.o[0m
+[7.956s] [ 20%] Built target robot_localization__rosidl_generator_c
+[8.000s] [ 21%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/set_datum__type_support.cpp.o[0m
+[8.380s] [ 22%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/get_state__type_support.cpp.o[0m
+[8.390s] [ 23%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/set_datum__type_support.cpp.o[0m
+[8.443s] [ 24%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/set_pose__type_support.cpp.o[0m
+[8.504s] [ 25%] [32m[1mLinking CXX shared library librobot_localization__rosidl_typesupport_cpp.so[0m
+[8.664s] [ 25%] Built target robot_localization__rosidl_typesupport_cpp
+[8.732s] [ 26%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[8.793s] [ 27%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/toggle_filter_processing__type_support.cpp.o[0m
+[8.975s] [ 28%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robot_localization/srv/detail/to_ll__type_support.cpp.o[0m
+[9.219s] [ 28%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/set_pose__type_support.cpp.o[0m
+[9.423s] [ 29%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/toggle_filter_processing__type_support.cpp.o[0m
+[9.448s] [35m[1mScanning dependencies of target robot_localization__rosidl_typesupport_c[0m
+[9.516s] [ 29%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/from_ll__type_support.cpp.o[0m
+[9.519s] [ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[9.530s] [ 31%] [32m[1mLinking CXX shared library librobot_localization__rosidl_typesupport_introspection_cpp.so[0m
+[9.592s] [ 32%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/get_state__type_support.cpp.o[0m
+[9.673s] [ 33%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/set_datum__type_support.cpp.o[0m
+[9.740s] [ 33%] Built target robot_localization__rosidl_typesupport_introspection_cpp
+[9.770s] [ 34%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/set_pose__type_support.cpp.o[0m
+[9.771s] [ 35%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robot_localization/srv/detail/dds_fastrtps/to_ll__type_support.cpp.o[0m
+[9.825s] [ 36%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/toggle_filter_processing__type_support.cpp.o[0m
+[9.877s] [ 37%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_c.dir/rosidl_typesupport_c/robot_localization/srv/to_ll__type_support.cpp.o[0m
+[9.963s] [ 38%] [32m[1mLinking CXX shared library librobot_localization__rosidl_typesupport_c.so[0m
+[10.032s] [ 38%] Built target robot_localization__rosidl_typesupport_c
+[10.288s] [35m[1mScanning dependencies of target robot_localization__rosidl_typesupport_introspection_c[0m
+[10.334s] [ 39%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/get_state__type_support.c.o[0m
+[10.334s] [ 40%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/from_ll__type_support.c.o[0m
+[10.365s] [ 40%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/set_datum__type_support.c.o[0m
+[10.367s] [ 41%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/set_pose__type_support.c.o[0m
+[10.443s] [ 42%] [32m[1mLinking CXX shared library librobot_localization__rosidl_typesupport_fastrtps_cpp.so[0m
+[10.443s] [ 43%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/toggle_filter_processing__type_support.c.o[0m
+[10.444s] [ 44%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robot_localization/srv/detail/to_ll__type_support.c.o[0m
+[10.507s] [ 45%] [32m[1mLinking C shared library librobot_localization__rosidl_typesupport_introspection_c.so[0m
+[10.561s] [ 45%] Built target robot_localization__rosidl_typesupport_introspection_c
+[10.602s] [ 45%] Built target robot_localization__rosidl_typesupport_fastrtps_cpp
+[10.617s] [ 46%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[11.199s] [35m[1mScanning dependencies of target robot_localization__rosidl_typesupport_fastrtps_c[0m
+[11.256s] [ 48%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/from_ll__type_support_c.cpp.o[0m
+[11.256s] [ 48%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/get_state__type_support_c.cpp.o[0m
+[11.262s] [ 49%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/set_datum__type_support_c.cpp.o[0m
+[11.268s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/toggle_filter_processing__type_support_c.cpp.o[0m
+[11.269s] [ 51%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/set_pose__type_support_c.cpp.o[0m
+[12.505s] [ 51%] [32mBuilding CXX object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robot_localization/srv/detail/to_ll__type_support_c.cpp.o[0m
+[13.003s] [ 52%] [32m[1mLinking CXX shared library librobot_localization__rosidl_typesupport_fastrtps_c.so[0m
+[13.132s] [ 52%] Built target robot_localization__rosidl_typesupport_fastrtps_c
+[13.147s] [35m[1mScanning dependencies of target robot_localization[0m
+[13.160s] [ 52%] Built target robot_localization
+[13.174s] [35m[1mScanning dependencies of target rl_lib[0m
+[13.174s] [35m[1mScanning dependencies of target robot_localization__py[0m
+[13.190s] [ 53%] [34m[1mGenerating Python code for ROS interfaces[0m
+[13.811s] [ 54%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/filter_base.cpp.o[0m
+[13.828s] [ 55%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/ekf.cpp.o[0m
+[13.828s] [ 56%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/filter_utilities.cpp.o[0m
+[13.830s] [ 57%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/ukf.cpp.o[0m
+[15.318s] [ 57%] Built target robot_localization__py
+[15.334s] [35m[1mScanning dependencies of target robot_localization__python[0m
+[15.491s] [ 58%] [32mBuilding C object CMakeFiles/robot_localization__python.dir/rosidl_generator_py/robot_localization/srv/_from_ll_s.c.o[0m
+[15.922s] [ 58%] [32mBuilding C object CMakeFiles/robot_localization__python.dir/rosidl_generator_py/robot_localization/srv/_get_state_s.c.o[0m
+[16.333s] [ 59%] [32mBuilding C object CMakeFiles/robot_localization__python.dir/rosidl_generator_py/robot_localization/srv/_set_datum_s.c.o[0m
+[16.663s] [ 60%] [32mBuilding C object CMakeFiles/robot_localization__python.dir/rosidl_generator_py/robot_localization/srv/_set_pose_s.c.o[0m
+[16.974s] [ 61%] [32mBuilding C object CMakeFiles/robot_localization__python.dir/rosidl_generator_py/robot_localization/srv/_toggle_filter_processing_s.c.o[0m
+[17.303s] [ 62%] [32mBuilding C object CMakeFiles/robot_localization__python.dir/rosidl_generator_py/robot_localization/srv/_to_ll_s.c.o[0m
+[17.503s] [ 63%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/navsat_transform.cpp.o[0m
+[17.590s] [ 64%] [32m[1mLinking C shared library rosidl_generator_py/robot_localization/librobot_localization__python.so[0m
+[17.676s] [ 64%] Built target robot_localization__python
+[17.722s] [35m[1mScanning dependencies of target robot_localization__rosidl_typesupport_fastrtps_c__pyext[0m
+[17.822s] [ 65%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/robot_localization/_robot_localization_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[18.600s] [ 66%] [32m[1mLinking CXX shared library rosidl_generator_py/robot_localization/robot_localization_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[18.803s] [ 66%] Built target robot_localization__rosidl_typesupport_fastrtps_c__pyext
+[18.826s] [35m[1mScanning dependencies of target robot_localization__rosidl_typesupport_introspection_c__pyext[0m
+[18.944s] [ 67%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/robot_localization/_robot_localization_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[19.582s] [ 68%] [32m[1mLinking C shared library rosidl_generator_py/robot_localization/robot_localization_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[19.657s] [ 68%] Built target robot_localization__rosidl_typesupport_introspection_c__pyext
+[19.689s] [35m[1mScanning dependencies of target robot_localization__rosidl_typesupport_c__pyext[0m
+[19.790s] [ 69%] [32mBuilding C object CMakeFiles/robot_localization__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/robot_localization/_robot_localization_s.ep.rosidl_typesupport_c.c.o[0m
+[20.419s] [ 69%] [32m[1mLinking C shared library rosidl_generator_py/robot_localization/robot_localization_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[20.487s] [ 69%] Built target robot_localization__rosidl_typesupport_c__pyext
+[20.504s] [ 69%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/robot_localization_estimator.cpp.o[0m
+[22.938s] [ 70%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/ros_filter.cpp.o[0m
+[24.405s] [ 71%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/ros_filter_utilities.cpp.o[0m
+[24.725s] [ 72%] [32m[1mLinking CXX static library libgtest.a[0m
+[24.873s] [ 72%] Built target gtest
+[24.892s] [ 73%] [32mBuilding CXX object CMakeFiles/rl_lib.dir/src/ros_robot_localization_listener.cpp.o[0m
+[95.792s] [ 74%] [32m[1mLinking CXX shared library librl_lib.so[0m
+[97.200s] [ 74%] Built target rl_lib
+[97.215s] [35m[1mScanning dependencies of target test_ros_robot_localization_listener_publisher[0m
+[97.215s] [35m[1mScanning dependencies of target test_ros_robot_localization_listener[0m
+[97.215s] [35m[1mScanning dependencies of target ukf_node[0m
+[97.215s] [35m[1mScanning dependencies of target test_navsat_conversions[0m
+[97.216s] [35m[1mScanning dependencies of target test_robot_localization_estimator[0m
+[97.216s] [35m[1mScanning dependencies of target test_ekf[0m
+[97.247s] [ 74%] [32mBuilding CXX object CMakeFiles/test_navsat_conversions.dir/test/test_navsat_conversions.cpp.o[0m
+[97.349s] [ 76%] [32mBuilding CXX object CMakeFiles/test_ros_robot_localization_listener.dir/test/test_ros_robot_localization_listener.cpp.o[0m
+[97.349s] [ 76%] [32mBuilding CXX object CMakeFiles/test_robot_localization_estimator.dir/test/test_robot_localization_estimator.cpp.o[0m
+[97.363s] [ 77%] [32mBuilding CXX object CMakeFiles/ukf_node.dir/src/ukf_node.cpp.o[0m
+[97.404s] [ 78%] [32mBuilding CXX object CMakeFiles/test_ekf.dir/test/test_ekf.cpp.o[0m
+[97.418s] [ 78%] [32mBuilding CXX object CMakeFiles/test_ros_robot_localization_listener_publisher.dir/test/test_ros_robot_localization_listener_publisher.cpp.o[0m
+[99.724s] [ 79%] [32m[1mLinking CXX executable test_navsat_conversions[0m
+[100.290s] [ 79%] Built target test_navsat_conversions
+[100.359s] [35m[1mScanning dependencies of target ekf_node[0m
+[100.584s] [ 79%] [32mBuilding CXX object CMakeFiles/ekf_node.dir/src/ekf_node.cpp.o[0m
+[105.746s] [ 80%] [32m[1mLinking CXX executable test_robot_localization_estimator[0m
+[106.365s] [ 80%] Built target test_robot_localization_estimator
+[106.382s] [35m[1mScanning dependencies of target test_ukf[0m
+[106.693s] [ 81%] [32mBuilding CXX object CMakeFiles/test_ukf.dir/test/test_ukf.cpp.o[0m
+[106.936s] [ 82%] [32m[1mLinking CXX executable ukf_node[0m
+[107.372s] [ 83%] [32m[1mLinking CXX executable test_ros_robot_localization_listener[0m
+[107.400s] [ 83%] Built target ukf_node
+[107.424s] [35m[1mScanning dependencies of target test_navsat_transform[0m
+[107.614s] [ 84%] [32mBuilding CXX object CMakeFiles/test_navsat_transform.dir/test/test_navsat_transform.cpp.o[0m
+[107.953s] [ 84%] Built target test_ros_robot_localization_listener
+[107.974s] [35m[1mScanning dependencies of target filter_base-test[0m
+[108.150s] [ 85%] [32mBuilding CXX object CMakeFiles/filter_base-test.dir/test/test_filter_base.cpp.o[0m
+[108.824s] [ 86%] [32m[1mLinking CXX executable ekf_node[0m
+[109.065s] [ 87%] [32m[1mLinking CXX executable test_ekf[0m
+[109.259s] [ 87%] Built target ekf_node
+[109.276s] [35m[1mScanning dependencies of target navsat_transform_node[0m
+[109.516s] [ 88%] [32mBuilding CXX object CMakeFiles/navsat_transform_node.dir/src/navsat_transform_node.cpp.o[0m
+[109.610s] [ 88%] Built target test_ekf
+[109.633s] [35m[1mScanning dependencies of target robot_localization_listener_node[0m
+[109.799s] [ 89%] [32mBuilding CXX object CMakeFiles/robot_localization_listener_node.dir/src/robot_localization_listener_node.cpp.o[0m
+[110.506s] [ 90%] [32m[1mLinking CXX executable test_ros_robot_localization_listener_publisher[0m
+[110.917s] [ 90%] Built target test_ros_robot_localization_listener_publisher
+[110.944s] [35m[1mScanning dependencies of target test_ukf_localization_node_interfaces[0m
+[111.101s] [ 91%] [32mBuilding CXX object CMakeFiles/test_ukf_localization_node_interfaces.dir/test/test_ukf_localization_node_interfaces.cpp.o[0m
+[113.115s] [ 92%] [32m[1mLinking CXX executable filter_base-test[0m
+[113.720s] [ 92%] Built target filter_base-test
+[113.743s] [35m[1mScanning dependencies of target test_ekf_localization_node_interfaces[0m
+[113.973s] [ 93%] [32mBuilding CXX object CMakeFiles/test_ekf_localization_node_interfaces.dir/test/test_ekf_localization_node_interfaces.cpp.o[0m
+[115.182s] [ 94%] [32m[1mLinking CXX executable navsat_transform_node[0m
+[115.183s] [ 95%] [32m[1mLinking CXX executable test_navsat_transform[0m
+[115.603s] [ 95%] Built target navsat_transform_node
+[115.618s] [ 95%] Built target test_navsat_transform
+[115.625s] [35m[1mScanning dependencies of target test_filter_base_diagnostics_timestamps[0m
+[115.828s] [ 96%] [32mBuilding CXX object CMakeFiles/test_filter_base_diagnostics_timestamps.dir/test/test_filter_base_diagnostics_timestamps.cpp.o[0m
+[118.065s] [ 97%] [32m[1mLinking CXX executable test_ukf[0m
+[118.361s] [ 97%] [32m[1mLinking CXX executable robot_localization_listener_node[0m
+[118.543s] [ 97%] Built target test_ukf
+[118.702s] [ 97%] Built target robot_localization_listener_node
+[137.851s] [ 98%] [32m[1mLinking CXX executable test_filter_base_diagnostics_timestamps[0m
+[138.231s] [ 99%] [32m[1mLinking CXX executable test_ukf_localization_node_interfaces[0m
+[138.355s] [ 99%] Built target test_filter_base_diagnostics_timestamps
+[138.658s] [ 99%] Built target test_ukf_localization_node_interfaces
+[140.135s] [100%] [32m[1mLinking CXX executable test_ekf_localization_node_interfaces[0m
+[140.513s] [100%] Built target test_ekf_localization_node_interfaces
+[140.527s] Invoked command in '/root/marvin/software/library_ws/build/robot_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/marvin/software/library_ws/build/robot_localization -- -j6 -l6
+[140.780s] Invoking command in '/root/marvin/software/library_ws/build/robot_localization': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/marvin/software/library_ws/build/robot_localization
+[140.790s] -- Install configuration: "RelWithDebInfo"
+[140.791s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/ament_index/resource_index/rosidl_interfaces/robot_localization
+[140.791s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization
+[140.791s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv
+[140.791s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/toggle_filter_processing.h
+[140.792s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/set_pose.h
+[140.792s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/set_datum.h
+[140.792s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/from_ll.h
+[140.792s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/get_state.h
+[140.793s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/to_ll.h
+[140.793s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail
+[140.793s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__struct.h
+[140.793s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__functions.h
+[140.793s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__type_support.h
+[140.794s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__type_support.h
+[140.794s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__type_support.h
+[140.794s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__functions.c
+[140.794s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__functions.c
+[140.795s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__functions.c
+[140.795s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__functions.h
+[140.795s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__struct.h
+[140.795s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__struct.h
+[140.795s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__functions.h
+[140.795s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__type_support.h
+[140.795s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__functions.c
+[140.795s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__struct.h
+[140.796s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__functions.c
+[140.796s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__functions.h
+[140.796s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__functions.c
+[140.796s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__type_support.h
+[140.796s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__struct.h
+[140.797s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__functions.h
+[140.797s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__functions.h
+[140.797s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__struct.h
+[140.797s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__type_support.h
+[140.797s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/msg
+[140.797s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/msg/rosidl_generator_c__visibility_control.h
+[140.797s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/environment/library_path.sh
+[140.797s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/environment/library_path.dsv
+[140.797s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_generator_c.so
+[140.799s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_generator_c.so" to ""
+[140.799s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization
+[140.799s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv
+[140.800s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail
+[140.800s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__rosidl_typesupport_fastrtps_c.h
+[140.800s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__rosidl_typesupport_fastrtps_c.h
+[140.800s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__rosidl_typesupport_fastrtps_c.h
+[140.800s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__rosidl_typesupport_fastrtps_c.h
+[140.801s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__rosidl_typesupport_fastrtps_c.h
+[140.801s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__rosidl_typesupport_fastrtps_c.h
+[140.801s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/msg
+[140.801s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[140.801s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_fastrtps_c.so
+[140.802s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_fastrtps_c.so" to ""
+[140.802s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization
+[140.803s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv
+[140.803s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail
+[140.803s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__rosidl_typesupport_fastrtps_cpp.hpp
+[140.803s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__rosidl_typesupport_fastrtps_cpp.hpp
+[140.803s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__rosidl_typesupport_fastrtps_cpp.hpp
+[140.803s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__rosidl_typesupport_fastrtps_cpp.hpp
+[140.804s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__rosidl_typesupport_fastrtps_cpp.hpp
+[140.804s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__rosidl_typesupport_fastrtps_cpp.hpp
+[140.804s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/dds_fastrtps
+[140.804s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/msg
+[140.804s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[140.804s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_fastrtps_cpp.so
+[140.806s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_fastrtps_cpp.so" to ""
+[140.806s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization
+[140.806s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv
+[140.806s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail
+[140.806s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__rosidl_typesupport_introspection_c.h
+[140.807s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__type_support.c
+[140.807s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__type_support.c
+[140.808s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__type_support.c
+[140.808s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__rosidl_typesupport_introspection_c.h
+[140.808s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__type_support.c
+[140.808s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__rosidl_typesupport_introspection_c.h
+[140.808s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__type_support.c
+[140.809s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__type_support.c
+[140.809s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__rosidl_typesupport_introspection_c.h
+[140.809s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__rosidl_typesupport_introspection_c.h
+[140.809s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__rosidl_typesupport_introspection_c.h
+[140.809s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/msg
+[140.809s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[140.809s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_introspection_c.so
+[140.810s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_introspection_c.so" to ""
+[140.810s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_c.so
+[140.811s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_c.so" to ""
+[140.811s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization
+[140.811s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv
+[140.811s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/toggle_filter_processing.hpp
+[140.812s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/to_ll.hpp
+[140.812s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/from_ll.hpp
+[140.812s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/get_state.hpp
+[140.813s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/set_pose.hpp
+[140.813s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/set_datum.hpp
+[140.813s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail
+[140.813s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__type_support.hpp
+[140.813s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__type_support.hpp
+[140.813s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__type_support.hpp
+[140.813s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__builder.hpp
+[140.814s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__type_support.hpp
+[140.814s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__traits.hpp
+[140.814s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__builder.hpp
+[140.814s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__struct.hpp
+[140.814s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__builder.hpp
+[140.815s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__struct.hpp
+[140.815s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__traits.hpp
+[140.815s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__traits.hpp
+[140.815s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__type_support.hpp
+[140.816s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__builder.hpp
+[140.816s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__builder.hpp
+[140.816s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__struct.hpp
+[140.816s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__builder.hpp
+[140.816s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__type_support.hpp
+[140.817s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__traits.hpp
+[140.817s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__struct.hpp
+[140.817s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__struct.hpp
+[140.817s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__struct.hpp
+[140.818s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__traits.hpp
+[140.818s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__traits.hpp
+[140.818s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/msg
+[140.818s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/msg/rosidl_generator_cpp__visibility_control.hpp
+[140.819s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization
+[140.819s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv
+[140.819s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail
+[140.819s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__type_support.cpp
+[140.819s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__type_support.cpp
+[140.819s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/to_ll__rosidl_typesupport_introspection_cpp.hpp
+[140.819s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__type_support.cpp
+[140.819s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__type_support.cpp
+[140.820s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__type_support.cpp
+[140.820s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_datum__rosidl_typesupport_introspection_cpp.hpp
+[140.820s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/get_state__rosidl_typesupport_introspection_cpp.hpp
+[140.820s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/from_ll__rosidl_typesupport_introspection_cpp.hpp
+[140.820s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/toggle_filter_processing__rosidl_typesupport_introspection_cpp.hpp
+[140.820s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__type_support.cpp
+[140.820s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/srv/detail/set_pose__rosidl_typesupport_introspection_cpp.hpp
+[140.820s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_introspection_cpp.so
+[140.821s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_introspection_cpp.so" to ""
+[140.821s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_cpp.so
+[140.822s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__rosidl_typesupport_cpp.so" to ""
+[140.822s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/environment/pythonpath.sh
+[140.822s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/environment/pythonpath.dsv
+[140.823s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/__init__.py
+[140.859s] Compiling '/root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/__init__.py'...
+[140.862s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv
+[140.862s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_set_pose.py
+[140.863s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_get_state.py
+[140.863s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_get_state_s.c
+[140.863s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_to_ll.py
+[140.863s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_to_ll_s.c
+[140.863s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/__init__.py
+[140.863s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_set_datum.py
+[140.863s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_from_ll_s.c
+[140.864s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_set_datum_s.c
+[140.864s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_toggle_filter_processing.py
+[140.864s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_toggle_filter_processing_s.c
+[140.864s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_from_ll.py
+[140.864s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/srv/_set_pose_s.c
+[140.865s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[140.866s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+[140.866s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[140.867s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+[140.867s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[140.868s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages/robot_localization/robot_localization_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+[140.868s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__python.so
+[140.870s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/librobot_localization__python.so" to ""
+[140.870s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/FromLL.idl
+[140.870s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/GetState.idl
+[140.870s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/SetDatum.idl
+[140.871s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/SetPose.idl
+[140.871s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/ToggleFilterProcessing.idl
+[140.871s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/ToLL.idl
+[140.872s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/FromLL.srv
+[140.872s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/FromLL_Request.msg
+[140.872s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/FromLL_Response.msg
+[140.872s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/GetState.srv
+[140.873s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/GetState_Request.msg
+[140.873s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/GetState_Response.msg
+[140.873s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/SetDatum.srv
+[140.873s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/SetDatum_Request.msg
+[140.873s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/SetDatum_Response.msg
+[140.873s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/SetPose.srv
+[140.874s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/SetPose_Request.msg
+[140.874s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/SetPose_Response.msg
+[140.874s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/ToggleFilterProcessing.srv
+[140.874s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/ToggleFilterProcessing_Request.msg
+[140.874s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/ToggleFilterProcessing_Response.msg
+[140.875s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/ToLL.srv
+[140.875s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/ToLL_Request.msg
+[140.875s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/srv/ToLL_Response.msg
+[140.875s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/filter_base-test
+[140.888s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/filter_base-test" to ""
+[140.888s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_filter_base_diagnostics_timestamps
+[140.916s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_filter_base_diagnostics_timestamps" to ""
+[140.916s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ekf
+[140.929s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ekf" to ""
+[140.930s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ekf_localization_node_interfaces
+[140.958s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ekf_localization_node_interfaces" to ""
+[140.958s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ukf
+[140.971s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ukf" to ""
+[140.971s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ukf_localization_node_interfaces
+[140.996s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ukf_localization_node_interfaces" to ""
+[140.996s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_robot_localization_estimator
+[141.008s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_robot_localization_estimator" to ""
+[141.008s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_navsat_conversions
+[141.018s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_navsat_conversions" to ""
+[141.018s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_navsat_transform
+[141.029s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_navsat_transform" to ""
+[141.029s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ros_robot_localization_listener
+[141.041s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ros_robot_localization_listener" to ""
+[141.041s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ros_robot_localization_listener_publisher
+[141.047s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/test_ros_robot_localization_listener_publisher" to ""
+[141.048s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test
+[141.048s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag2.sh
+[141.048s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_navsat_conversions.cpp
+[141.048s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_navsat_transform.launch.py
+[141.049s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_interfaces.launch.py
+[141.049s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag3.sh
+[141.049s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag2.launch.py
+[141.049s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_robot_localization_estimator.launch.py
+[141.049s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_localization_node_bag_pose_tester.cpp
+[141.050s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ros_robot_localization_listener.yaml
+[141.050s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag1.launch.py
+[141.050s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag2.yaml
+[141.050s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_filter_base_diagnostics_timestamps.cpp
+[141.050s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag2.sh
+[141.050s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag3.yaml
+[141.050s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_interfaces.cpp
+[141.051s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf.cpp
+[141.051s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_navsat_transform.cpp
+[141.051s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag1.yaml
+[141.051s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag1.sh
+[141.051s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag2.launch.py
+[141.052s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_interfaces.yaml
+[141.052s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_interfaces.yaml
+[141.052s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf.cpp
+[141.052s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ros_robot_localization_listener.cpp
+[141.052s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag3.yaml
+[141.052s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag1.sh
+[141.052s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ros_robot_localization_listener_publisher.cpp
+[141.052s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_filter_base_diagnostics_timestamps.launch.py
+[141.052s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag1.yaml
+[141.052s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test1.bag
+[141.054s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_interfaces.cpp
+[141.054s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_interfaces.launch.py
+[141.054s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag2.yaml
+[141.055s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ros_robot_localization_listener.launch.py
+[141.055s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag3.sh
+[141.055s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test2.bag
+[141.055s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_filter_base_diagnostics_timestamps.yaml
+[141.056s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test3.bag
+[141.088s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag1.launch.py
+[141.088s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_filter_base.cpp
+[141.088s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ekf_localization_node_bag3.launch.py
+[141.088s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_robot_localization_estimator.cpp
+[141.089s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/test/test_ukf_localization_node_bag3.launch.py
+[141.089s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/navsat_transform_node
+[141.091s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/navsat_transform_node" to ""
+[141.092s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/ekf_node
+[141.095s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/ekf_node" to ""
+[141.095s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/ukf_node
+[141.099s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/ukf_node" to ""
+[141.099s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/robot_localization_listener_node
+[141.105s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/robot_localization/robot_localization_listener_node" to ""
+[141.105s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/lib/librl_lib.so
+[141.247s] -- Set runtime path of "/root/marvin/software/library_ws/install/robot_localization/lib/librl_lib.so" to ""
+[141.247s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include
+[141.247s] -- Up-to-date: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization
+[141.248s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/filter_state.hpp
+[141.248s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/ros_robot_localization_listener.hpp
+[141.248s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/navsat_conversions.hpp
+[141.248s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/ukf.hpp
+[141.248s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/ros_filter_types.hpp
+[141.248s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/robot_localization_estimator.hpp
+[141.248s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/ros_filter_utilities.hpp
+[141.249s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/navsat_transform.hpp
+[141.249s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/ekf.hpp
+[141.249s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/filter_common.hpp
+[141.249s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/filter_utilities.hpp
+[141.249s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/measurement.hpp
+[141.249s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/ros_filter.hpp
+[141.249s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/include/robot_localization/filter_base.hpp
+[141.250s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/params
+[141.250s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/params/dual_ekf_navsat_example.yaml
+[141.250s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/params/ekf.yaml
+[141.250s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/params/navsat_transform.yaml
+[141.250s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/params/ekf_x1_x3.yaml
+[141.251s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/params/ukf.yaml
+[141.251s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/params/ekf_BK.yaml
+[141.251s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/launch
+[141.251s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/launch/ukf.launch.py
+[141.251s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/launch/ekf.launch.py
+[141.251s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/launch/navsat_transform.launch.py
+[141.251s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/launch/ekf_x1_x3_launch.py
+[141.251s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/launch/dual_ekf_navsat_example.launch.py
+[141.252s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/ament_index/resource_index/package_run_dependencies/robot_localization
+[141.252s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/ament_index/resource_index/parent_prefix_path/robot_localization
+[141.252s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/environment/ament_prefix_path.sh
+[141.252s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/environment/ament_prefix_path.dsv
+[141.252s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/environment/path.sh
+[141.252s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/environment/path.dsv
+[141.252s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/local_setup.bash
+[141.253s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/local_setup.sh
+[141.253s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/local_setup.zsh
+[141.253s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/local_setup.dsv
+[141.253s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.dsv
+[141.253s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/ament_index/resource_index/packages/robot_localization
+[141.254s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_generator_cExport.cmake
+[141.254s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_generator_cExport-relwithdebinfo.cmake
+[141.254s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_introspection_cExport.cmake
+[141.254s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_introspection_cExport-relwithdebinfo.cmake
+[141.254s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_cExport.cmake
+[141.255s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_cExport-relwithdebinfo.cmake
+[141.255s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_generator_cppExport.cmake
+[141.255s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_introspection_cppExport.cmake
+[141.255s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_introspection_cppExport-relwithdebinfo.cmake
+[141.256s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_cppExport.cmake
+[141.256s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localization__rosidl_typesupport_cppExport-relwithdebinfo.cmake
+[141.256s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/rosidl_cmake-extras.cmake
+[141.256s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/ament_cmake_export_dependencies-extras.cmake
+[141.257s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/ament_cmake_export_libraries-extras.cmake
+[141.257s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/ament_cmake_export_targets-extras.cmake
+[141.257s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/ament_cmake_export_include_directories-extras.cmake
+[141.257s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[141.257s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[141.258s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localizationConfig.cmake
+[141.258s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/cmake/robot_localizationConfig-version.cmake
+[141.258s] -- Installing: /root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.xml
+[141.261s] Invoked command in '/root/marvin/software/library_ws/build/robot_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/marvin/software/library_ws/build/robot_localization

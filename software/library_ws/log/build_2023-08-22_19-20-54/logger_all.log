@@ -1,0 +1,158 @@
+[0.308s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.308s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ff880c6baf0>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=6, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ff880c6baf0>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7ff880bf40a0>)
+[0.333s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.333s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.333s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.333s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.333s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.334s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.334s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/root/marvin/software/library_ws'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extensions ['ignore', 'ignore_ament_install']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extension 'ignore'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extension 'ignore_ament_install'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extensions ['colcon_pkg']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extension 'colcon_pkg'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extensions ['colcon_meta']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extension 'colcon_meta'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extensions ['ros']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_localization) by extension 'ros'
+[0.365s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_localization' with type 'ros.ament_cmake' and name 'robot_localization'
+[0.365s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.366s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.366s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.366s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.366s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.390s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 311 installed packages in /opt/ros/foxy
+[0.392s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.507s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_args' from command line to 'None'
+[0.507s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_target' from command line to 'None'
+[0.507s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.507s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_clean_cache' from command line to 'False'
+[0.507s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_clean_first' from command line to 'False'
+[0.507s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'cmake_force_configure' from command line to 'False'
+[0.507s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'ament_cmake_args' from command line to 'None'
+[0.507s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'catkin_cmake_args' from command line to 'None'
+[0.507s] Level 5:colcon.colcon_core.verb:set package 'robot_localization' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.507s] DEBUG:colcon.colcon_core.verb:Building package 'robot_localization' with the following arguments: {'ament_cmake_args': None, 'build_base': '/root/marvin/software/library_ws/build/robot_localization', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/root/marvin/software/library_ws/install/robot_localization', 'merge_install': False, 'path': '/root/marvin/software/library_ws/src/robot_localization', 'symlink_install': False, 'test_result_base': None}
+[0.507s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.511s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.511s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/root/marvin/software/library_ws/src/robot_localization' with build type 'ament_cmake'
+[0.511s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/root/marvin/software/library_ws/src/robot_localization'
+[0.520s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.521s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.521s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.534s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/marvin/software/library_ws/build/robot_localization': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/marvin/software/library_ws/src/robot_localization -DCMAKE_INSTALL_PREFIX=/root/marvin/software/library_ws/install/robot_localization
+[5.241s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/marvin/software/library_ws/build/robot_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /root/marvin/software/library_ws/src/robot_localization -DCMAKE_INSTALL_PREFIX=/root/marvin/software/library_ws/install/robot_localization
+[5.245s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/marvin/software/library_ws/build/robot_localization': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/marvin/software/library_ws/build/robot_localization -- -j6 -l6
+[141.039s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/marvin/software/library_ws/build/robot_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /root/marvin/software/library_ws/build/robot_localization -- -j6 -l6
+[141.291s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/root/marvin/software/library_ws/build/robot_localization': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/marvin/software/library_ws/build/robot_localization
+[141.772s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_localization)
+[141.773s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/root/marvin/software/library_ws/build/robot_localization' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /root/marvin/software/library_ws/build/robot_localization
+[141.784s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization' for CMake module files
+[141.785s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization' for CMake config files
+[141.785s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'cmake_prefix_path')
+[141.786s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.ps1'
+[141.788s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.dsv'
+[141.789s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.sh'
+[141.790s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization/lib'
+[141.790s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'ld_library_path_lib')
+[141.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.ps1'
+[141.792s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.dsv'
+[141.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.sh'
+[141.792s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization/bin'
+[141.793s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization/lib/pkgconfig/robot_localization.pc'
+[141.793s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages'
+[141.793s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'pythonpath')
+[141.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/pythonpath.ps1'
+[141.794s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/pythonpath.dsv'
+[141.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/pythonpath.sh'
+[141.795s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization/bin'
+[141.796s] INFO:colcon.colcon_core.shell:Creating package script '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.ps1'
+[141.798s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.dsv'
+[141.799s] INFO:colcon.colcon_core.shell:Creating package script '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.sh'
+[141.800s] INFO:colcon.colcon_core.shell:Creating package script '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.bash'
+[141.801s] INFO:colcon.colcon_core.shell:Creating package script '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.zsh'
+[141.803s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/marvin/software/library_ws/install/robot_localization/share/colcon-core/packages/robot_localization)
+[142.037s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_localization)
+[142.039s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization' for CMake module files
+[142.039s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization' for CMake config files
+[142.040s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'cmake_prefix_path')
+[142.041s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.ps1'
+[142.042s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.dsv'
+[142.042s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/cmake_prefix_path.sh'
+[142.043s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization/lib'
+[142.043s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'ld_library_path_lib')
+[142.044s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.ps1'
+[142.045s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.dsv'
+[142.045s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/ld_library_path_lib.sh'
+[142.045s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization/bin'
+[142.046s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization/lib/pkgconfig/robot_localization.pc'
+[142.046s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization/lib/python3.8/site-packages'
+[142.046s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_localization', 'pythonpath')
+[142.047s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/pythonpath.ps1'
+[142.048s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/pythonpath.dsv'
+[142.048s] INFO:colcon.colcon_core.shell:Creating environment hook '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/hook/pythonpath.sh'
+[142.049s] Level 1:colcon.colcon_core.environment:checking '/root/marvin/software/library_ws/install/robot_localization/bin'
+[142.050s] INFO:colcon.colcon_core.shell:Creating package script '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.ps1'
+[142.051s] INFO:colcon.colcon_core.shell:Creating package descriptor '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.dsv'
+[142.051s] INFO:colcon.colcon_core.shell:Creating package script '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.sh'
+[142.052s] INFO:colcon.colcon_core.shell:Creating package script '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.bash'
+[142.053s] INFO:colcon.colcon_core.shell:Creating package script '/root/marvin/software/library_ws/install/robot_localization/share/robot_localization/package.zsh'
+[142.053s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/root/marvin/software/library_ws/install/robot_localization/share/colcon-core/packages/robot_localization)
+[142.054s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[142.054s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[142.055s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[142.055s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[142.063s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[142.063s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[142.063s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[142.085s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[142.087s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/marvin/software/library_ws/install/local_setup.ps1'
+[142.089s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/marvin/software/library_ws/install/_local_setup_util_ps1.py'
+[142.091s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/marvin/software/library_ws/install/setup.ps1'
+[142.093s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/marvin/software/library_ws/install/local_setup.sh'
+[142.093s] INFO:colcon.colcon_core.shell:Creating prefix util module '/root/marvin/software/library_ws/install/_local_setup_util_sh.py'
+[142.094s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/marvin/software/library_ws/install/setup.sh'
+[142.099s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/marvin/software/library_ws/install/local_setup.bash'
+[142.101s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/marvin/software/library_ws/install/setup.bash'
+[142.103s] INFO:colcon.colcon_core.shell:Creating prefix script '/root/marvin/software/library_ws/install/local_setup.zsh'
+[142.105s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/root/marvin/software/library_ws/install/setup.zsh'
