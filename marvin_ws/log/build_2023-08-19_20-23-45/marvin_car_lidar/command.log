@@ -1,6 +1,0 @@
-Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_car_lidar': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_car_lidar -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/marvin_car_lidar
-Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_car_lidar' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_car_lidar -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/marvin_car_lidar
-Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_car_lidar': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/marvin_car_lidar -- -j2 -l2
-Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_car_lidar' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/marvin_car_lidar -- -j2 -l2
-Invoking command in '/home/marvin/marvin/marvin_ws/build/marvin_car_lidar': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/marvin_car_lidar
-Invoked command in '/home/marvin/marvin/marvin_ws/build/marvin_car_lidar' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/marvin_car_lidar

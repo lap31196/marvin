@@ -1,6 +1,0 @@
-Invoking command in '/home/marvin/marvin/marvin_ws/build/openslam_gmapping': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_slam/openslam_gmapping -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/openslam_gmapping
-Invoked command in '/home/marvin/marvin/marvin_ws/build/openslam_gmapping' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/marvin/marvin/marvin_ws/src/marvin_slam/openslam_gmapping -DCMAKE_INSTALL_PREFIX=/home/marvin/marvin/marvin_ws/install/openslam_gmapping
-Invoking command in '/home/marvin/marvin/marvin_ws/build/openslam_gmapping': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/openslam_gmapping -- -j2 -l2
-Invoked command in '/home/marvin/marvin/marvin_ws/build/openslam_gmapping' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/marvin/marvin/marvin_ws/build/openslam_gmapping -- -j2 -l2
-Invoking command in '/home/marvin/marvin/marvin_ws/build/openslam_gmapping': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/openslam_gmapping
-Invoked command in '/home/marvin/marvin/marvin_ws/build/openslam_gmapping' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/marvin/marvin/marvin_ws/build/openslam_gmapping
