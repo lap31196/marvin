@@ -106,7 +106,7 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        laser:
+        lidar:
           Value: true
         map:
           Value: true
@@ -120,7 +120,7 @@ Visualization Manager:
       Tree:
         map:
           odom:
-            laser:
+            lidar:
               {}
       Update Interval: 0
       Value: true

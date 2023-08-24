@@ -100,7 +100,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 136; 138; 133
-    Fixed Frame: laser
+    Fixed Frame: lidar
     Frame Rate: 30
   Name: root
   Tools:
