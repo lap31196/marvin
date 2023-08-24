@@ -17,7 +17,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 print("---------------------INICIANDO M.A.R.V.I.N---------------------")
 def generate_launch_description():
     urdf_tutorial_path = get_package_share_path('marvincar_description')
-    default_model_path = urdf_tutorial_path / 'urdf/marvincar_R2.urdf.xacro'
+    default_model_path = urdf_tutorial_path / 'urdf/marvincar.urdf.xacro'
     default_rviz_config_path = urdf_tutorial_path / 'rviz/marvincar.rviz'
 
     gui_arg = DeclareLaunchArgument(name='gui', default_value='false', choices=['true', 'false'],
@@ -72,7 +72,7 @@ def generate_launch_description():
 
     base_node = Node(
         package='marvincar_base_node',
-        executable='base_node_R2',
+        executable='base_node',
         parameters=[{'pub_odom_tf': LaunchConfiguration('pub_odom_tf')}]
     )
 
