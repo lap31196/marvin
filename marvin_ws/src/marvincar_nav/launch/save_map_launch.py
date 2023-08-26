@@ -9,7 +9,7 @@ import os
 
 
 def generate_launch_description():
-    package_share_path = str(get_package_share_path('marvincar_nav'))
+    package_share_path = str(get_package_share_path('marvin_ws'))
     package_path = os.path.abspath(os.path.join(
         package_share_path, "../../../../src/marvincar_nav"))
     map_name = "marvincar"
