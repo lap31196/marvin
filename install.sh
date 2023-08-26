@@ -1,4 +1,4 @@
 #!/bin/sh
-cp ~/marvin/configurations/r2.bashrc ~/.bashrc
+cp ~/home/marvin/marvin/configurations/r2.bashrc ~/.bashrc
 source ~/.bashrc
 
