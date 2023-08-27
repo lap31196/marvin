@@ -36,7 +36,8 @@ Parameter Description:
 
 
 def generate_launch_description():
-    rviz_config_dir = os.path.join(get_package_share_directory('marvin_lidar'), 'rviz2', 'ldlidar.rviz')
+    rviz_config_dir = os.path.join(get_package_share_directory(
+        'marvin_lidar'), 'rviz2', 'ldlidar.rviz')
     return LaunchDescription([
         Node(
             # ldlidar publisher node
@@ -55,13 +56,13 @@ def generate_launch_description():
                 {'angle_crop_max': 225.0}
             ]
         ),
-        Node(
-            package='rviz2',
-            node_namespace='rviz2',
-            node_executable='rviz2',
-            parameters=None,
-            remappings=None,
-            arguments=['-d', rviz_config_dir],
-            output='screen',
-        ),
+        # Node(
+        #    package='rviz2',
+        #    node_namespace='rviz2',
+        #    node_executable='rviz2',
+        #    parameters=None,
+        #    remappings=None,
+        #    arguments=['-d', rviz_config_dir],
+        #    output='screen',
+        # ),
     ])
