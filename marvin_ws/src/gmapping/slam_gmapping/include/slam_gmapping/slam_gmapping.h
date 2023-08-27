@@ -47,8 +47,6 @@
 #include "gmapping/sensor/sensor_range/rangesensor.h"
 #include "gmapping/sensor/sensor_odometry/odometrysensor.h"
 
-using namespace std;
-
 class SlamGmapping : public rclcpp::Node{
 public:
     SlamGmapping();
@@ -70,11 +68,11 @@ private:
     std::shared_ptr<tf2_ros::TransformListener> tfl_;
 
     std::shared_ptr<message_filters::Subscriber<sensor_msgs::msg::LaserScan>> scan_filter_sub_;
-    std::shared_ptr<tf2_ros::MessageFilter<sensor_msgs::msg::LaserScan >> scan_filter_;
+    std::shared_ptr<tf2_ros::MessageFilter<sensor_msgs::msg::LaserScan>> scan_filter_;
     std::shared_ptr<tf2_ros::TransformBroadcaster> tfB_;
 
-    GMapping::GridSlamProcessor* gsp_;
-    GMapping::RangeSensor* gsp_laser_;
+    GMapping::GridSlamProcessor *gsp_;
+    GMapping::RangeSensor *gsp_laser_;
     // The angles in the laser, going from -x to x (adjustment is made to get the laser between
     // symmetrical bounds as that's what gmapping expects)
     std::vector<double> laser_angles_;
@@ -84,13 +82,14 @@ private:
     // We might need to change the order of the scan
     bool do_reverse_range_;
     unsigned int gsp_laser_beam_count_;
-    GMapping::OdometrySensor* gsp_odom_;
+    GMapping::OdometrySensor *gsp_odom_;
 
     bool got_first_scan_;
 
     bool got_map_;
     nav_msgs::msg::OccupancyGrid map_;
 
+    tf2::TimePoint last_map_update;
     tf2::Duration map_update_interval_;
     tf2::Transform map_to_odom_;
     std::mutex map_to_odom_mutex_;
@@ -107,9 +106,9 @@ private:
     std::string odom_frame_;
 
     void updateMap(sensor_msgs::msg::LaserScan::ConstSharedPtr scan);
-    bool getOdomPose(GMapping::OrientedPoint& gmap_pose, const rclcpp::Time& t);
+    bool getOdomPose(GMapping::OrientedPoint &gmap_pose, const rclcpp::Time &t);
     bool initMapper(sensor_msgs::msg::LaserScan::ConstSharedPtr scan);
-    bool addScan(sensor_msgs::msg::LaserScan::ConstSharedPtr scan, GMapping::OrientedPoint& gmap_pose);
+    bool addScan(sensor_msgs::msg::LaserScan::ConstSharedPtr scan, GMapping::OrientedPoint &gmap_pose);
     double computePoseEntropy();
 
     // Parameters used by GMapping
@@ -151,4 +150,4 @@ private:
     double tf_delay_;
 };
 
-#endif //SLAM_GMAPPING_SLAM_GMAPPING_H_
+#endif // SLAM_GMAPPING_SLAM_GMAPPING_H_

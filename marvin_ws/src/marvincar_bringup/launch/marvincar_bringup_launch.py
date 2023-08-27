@@ -88,6 +88,12 @@ def generate_launch_description():
             '/ekf_launch.py'])
     )
 
+    lidar_node = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('marvin_lidar'), 'launch'),
+            '/ld19.launch.py'])
+    )
+
     marvin_joy_node = Node(
         package='marvincar_ctrl',
         executable='marvin_joy',
@@ -106,5 +112,6 @@ def generate_launch_description():
         base_node,
         imu_filter_node,
         ekf_node,
-        marvin_joy_node
+        marvin_joy_node,
+        lidar_node
     ])

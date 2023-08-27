@@ -74,7 +74,7 @@ ament_target_dependencies(scan_dilute
         tf2_geometry_msgs
         openslam_gmapping)
 
-target_link_libraries(slam_gmapping pthread)
+#target_link_libraries(slam_gmapping pthread)
 target_link_libraries(transform pthread)
 target_link_libraries(scan_dilute pthread)
 
