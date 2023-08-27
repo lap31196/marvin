@@ -3,7 +3,8 @@ import os
 from time import sleep
 
 import launch
-from launch.actions import TimerAction
+from launch.actions import TimerAction,IncludeLaunchDescription
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 from launch import LaunchDescription
 from ament_index_python import get_package_share_directory
@@ -68,14 +69,18 @@ def generate_launch_description():
             parameters=[{'parents_frame': "odom",
                          'child_frame': "base_footprint"}]
         ),
-        TimerAction(period=1.0, actions=[
-            Node(
-                package='slam_gmapping',
-                node_namespace='slam_gmapping',
-                node_executable='slam_gmapping',
-                output='screen',
-                parameters=[{'use_sim_time': use_sim_time}]
-            )]),
+       # TimerAction(period=1.0, actions=[
+       #     Node(
+       #         package='slam_gmapping',
+       #         node_namespace='slam_gmapping',
+       #         node_executable='slam_gmapping',
+       #         output='screen',
+       #         parameters=[{'use_sim_time': use_sim_time}]
+       #     )]),
+       IncludeLaunchDescription(PythonLaunchDescriptionSource(
+        [os.path.join(get_package_share_directory('slam_gmapping'), 'launch'),
+         '/slam_gmapping.launch.py'])
+    )
        # Node(
        #     package='tf2_ros',
        #     executable='static_transform_publisher',

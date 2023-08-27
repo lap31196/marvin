@@ -9,17 +9,19 @@ import os
 
 
 def generate_launch_description():
-    main_package_path = get_package_share_path('marvincar_nav')
-    default_map_path = main_package_path / 'maps/marvincar'
+    package_share_path = str(get_package_share_path('marvincar_nav'))
+    package_path = os.path.abspath(os.path.join(
+        package_share_path, "../../../../src/marvincar_nav"))
+    map_name = "marvincar"
+    default_map_path = os.path.join(package_path, 'maps', map_name)
 
     map_arg = DeclareLaunchArgument(name='map_path', default_value=str(default_map_path),
                                     description='The path of the map')
-
     map_saver_node = Node(
         package='nav2_map_server',
         executable='map_saver_cli',
         arguments=[
-            '-f', LaunchConfiguration('map_path'), '--ros-args', '-p', 'save_map_timeout:=10000'],
+            '-f', LaunchConfiguration('map_path'), '--ros-args', '-p', 'save_map_timeout:=43500'],
     )
 
     return LaunchDescription([
