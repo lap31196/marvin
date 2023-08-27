@@ -127,7 +127,7 @@ export ROS_DOMAIN_ID=12
 export ROBOT_TYPE=r2   # r2, x1, x3
 export RPLIDAR_TYPE=a1  # a1, s2
 export CAMERA_TYPE=astraplus  #astrapro, astraplus
-echo "--------------------------------------------------------"
+echo "-----------------------MARVIN---------------------------"
 echo -e "ROS_DOMAIN_ID: \033[32m$ROS_DOMAIN_ID\033[0m" 
 echo -e "my_robot_type: \033[32m$ROBOT_TYPE\033[0m | my_lidar: \033[32m$RPLIDAR_TYPE\033[0m | my_camera: \033[32m$CAMERA_TYPE\033[0m"
 echo "--------------------------------------------------------"
