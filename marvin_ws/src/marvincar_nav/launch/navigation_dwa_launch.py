@@ -24,6 +24,11 @@ def generate_launch_description():
                               description='Full path to map file to load'),
         DeclareLaunchArgument('params_file', default_value=nav2_param_path,
                               description='Full path to param file to load'),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([os.path.join(
+                get_package_share_directory('marvincar_nav'), 'launch'),
+                '/localization_launch.py'])
+        ),
 
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
