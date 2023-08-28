@@ -17,7 +17,7 @@ Transform::Transform() : Node("transform_node"),
     this->declare_parameter("pitch");
     this->declare_parameter("yaw");
     this->get_parameter_or<std::string>("parents_frame", parents_frame, "odom");
-    this->get_parameter_or<std::string>("child_frame", child_frame, "laser");
+    this->get_parameter_or<std::string>("child_frame", child_frame, "base_footprint");
     this->get_parameter_or<std::double_t>("x", x, 0.0);
     this->get_parameter_or<std::double_t>("y", y, 0.0);
     this->get_parameter_or<std::double_t>("z", z, 0.0);

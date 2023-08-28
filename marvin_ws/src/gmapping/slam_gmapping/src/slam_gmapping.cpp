@@ -60,7 +60,7 @@ void SlamGmapping::init(){
 
     throttle_scans_ = 1;
 
-    this->declare_parameter<std::string>("base_frame","base_link");
+    this->declare_parameter<std::string>("base_frame","base_footprint");
     this->declare_parameter<std::string>("map_frame","map");
     this->declare_parameter<std::string>("odom_frame","odom");
 
