@@ -140,5 +140,5 @@ source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 #ros2
 source /opt/ros/foxy/setup.bash
 source /root/marvin/marvin_ws/install/setup.bash
-source /root/marvin/software/library_ws/install/setup.bash
+source /root/yahboomcar_ros2_ws/software/library_ws/install/setup.bash
 
