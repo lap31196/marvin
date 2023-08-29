@@ -12,12 +12,7 @@ def generate_launch_description():
         package='marvincar_laser',
         executable='laser_Avoidance',
     )
-    lidar_node = IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('marvin_lidar'), 'launch'),
-'/ld19.launch.py'])
-)
-    bringup_node = IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('marvincar_bringup'), 'launch'),
-'/marvincar_bringup_launch.py'])
-)
+ 
     
-    launch_description = LaunchDescription([laser_Avoidance_node,lidar_node,bringup_node]) 
+    launch_description = LaunchDescription([laser_Avoidance_node]) 
     return launch_description
