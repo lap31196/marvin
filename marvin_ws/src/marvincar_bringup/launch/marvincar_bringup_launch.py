@@ -84,7 +84,7 @@ def generate_launch_description():
 
     ekf_node = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory('robot_localization'), 'launch'),
+            get_package_share_directory('/root/yahboomcar_ws/software/library_ws/src/robot_localization'), 'launch'),
             '/ekf_x1_x3_launch.py'])
     )
 
