@@ -20,7 +20,7 @@ from rclpy.clock import Clock
 
 #from dynamic_reconfigure.server import Server
 car_type_dic={
-    'R2':5,
+    'r2':5,
     'X3':1,
     'NONE':-1
 }
@@ -32,7 +32,7 @@ class marvincar_driver(Node):
 		self.car = Rosmaster()
 		self.car.set_car_type(5)
 		#get parameter
-		self.declare_parameter('car_type', 'R2')
+		self.declare_parameter('car_type', 'r2')
 		self.car_type = self.get_parameter('car_type').get_parameter_value().string_value
 		print (self.car_type)
 		self.declare_parameter('imu_link', 'imu_link')
@@ -113,11 +113,11 @@ class marvincar_driver(Node):
 		state.header.stamp = time_stamp.to_msg()
 		state.header.frame_id = "joint_states"
 		if len(self.Prefix)==0:
-			state.name = ["back_right_joint", "back_left_joint","front_left_steer_joint","front_left_wheel_joint",
-							"front_right_steer_joint", "front_right_wheel_joint"]
+			state.name = ["joint_back_wheel_right", "joint_back_wheel_left","joint_front_handle_left","joint_front_wheel_left",
+							"joint_front_handle_right", "joint_front_wheel_right"]
 		else:
-			state.name = [self.Prefix+"back_right_joint",self.Prefix+ "back_left_joint",self.Prefix+"front_left_steer_joint",self.Prefix+"front_left_wheel_joint",
-							self.Prefix+"front_right_steer_joint", self.Prefix+"front_right_wheel_joint"]
+			state.name = [self.Prefix+"joint_back_wheel_right",self.Prefix+ "joint_back_wheel_left",self.Prefix+"joint_front_handle_left",self.Prefix+"joint_front_wheel_left",
+							self.Prefix+"joint_front_handle_right", self.Prefix+"joint_front_wheel_right"]
 		
 		#print ("mag: ",self.car.get_magnetometer_data())		
 		edition.data = self.car.get_version()*1.0
