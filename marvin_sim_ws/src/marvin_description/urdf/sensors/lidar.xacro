@@ -51,7 +51,7 @@
 
         <joint name="${frame_id}_to_base_link" type="fixed">
             <origin
-                xyz="0 0 0.14"
+                xyz="0 0 0.158"
                 rpy="0 0 0" />
             <parent link="base_link" />
             <child link="${frame_id}" />
