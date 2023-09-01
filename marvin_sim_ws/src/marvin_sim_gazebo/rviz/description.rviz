@@ -6,9 +6,8 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /Map1/Topic1
       Splitter Ratio: 0.5
-    Tree Height: 617
+    Tree Height: 664
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -71,12 +70,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        base_link:
+        base_footprint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        base_footprint:
+        base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -181,22 +179,18 @@ Visualization Manager:
           Value: true
         odom:
           Value: true
-        map:
-          Value: true    
       Marker Scale: 0.10000000149011612
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        map:
-        odom:
+        base_footprint:
           base_link:
-          base_footprint:
             back_wheel_left:
               {}
             back_wheel_right:
-             {}
+              {}
             camera_depth:
               camera_depth_optical:
                 {}
@@ -204,10 +198,10 @@ Visualization Manager:
               camera_optical_left:
                 {}
             camera_right:
-             camera_optical_right:
-               {}
+              camera_optical_right:
+                {}
             front_handle_left:
-             front_wheel_left:
+              front_wheel_left:
                 {}
             front_handle_right:
               front_wheel_right:
@@ -216,14 +210,9 @@ Visualization Manager:
               {}
             lidar:
               {}
+        odom:
+          {}
       Update Interval: 0
-      Value: true
-    - Class: rviz_default_plugins/Axes
-      Enabled: true
-      Length: 1
-      Name: Axes
-      Radius: 0.0010000000474974513
-      Reference Frame: <Fixed Frame>
       Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
@@ -258,10 +247,85 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: true
       Value: false
+    - Class: rviz_default_plugins/Image
+      Enabled: false
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: "Cámara frontal "
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /camera/color/image_raw
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz_default_plugins/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: RGB8
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: "Cámara profundidad "
+      Position Transformer: XYZ
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /camera/depth/color/points
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Class: rviz_default_plugins/Image
+      Enabled: false
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Cámara izquierda
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /camera_left/image_raw
+      Value: false
+    - Class: rviz_default_plugins/Image
+      Enabled: false
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: "Cámara derecha "
+      Normalize Range: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /camera_right/image_raw
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 238; 238; 236
-    Fixed Frame: base_link
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -322,12 +386,24 @@ Visualization Manager:
       Yaw: 2.56040096282959
     Saved: ~
 Window Geometry:
+  "Cámara derecha ":
+    collapsed: false
+  "Cámara frontal ":
+    collapsed: false
+  Cámara izquierda:
+    collapsed: false
   Displays:
     collapsed: false
-  Height: 943
+  Height: 893
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000001000000000000015600000355fc0200000001fb000000100044006900730070006c006100790073010000003d00000355000000c900ffffff000005dc0000035500000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000002000000000000015600000323fc0200000006fb000000100044006900730070006c006100790073010000003d00000323000000c900fffffffb0000001200530065006c0065006300740069006f006e00000002c0000000a00000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007300000002dc000000840000005c00fffffffb0000001e004300e1006d006100720061002000660072006f006e00740061006c0020000000029c000000c40000002800fffffffb00000020004300e1006d00610072006100200069007a0071007500690065007200640061000000029c000000c40000002800fffffffb0000001e004300e1006d006100720061002000640065007200650063006800610020000000029c000000c40000002800ffffff00000001000001cb00000323fc0200000001fb0000000a00560069006500770073010000003d00000323000000a400ffffff0000040b0000032300000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
   Width: 1848
   X: 72
   Y: 27
