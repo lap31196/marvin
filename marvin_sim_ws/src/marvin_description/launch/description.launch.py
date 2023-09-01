@@ -42,6 +42,7 @@ def generate_launch_description():
         package='joint_state_publisher',
         executable='joint_state_publisher',
         condition=UnlessCondition(LaunchConfiguration('gui')),
+        parameters=[{'use_sim_time': use_sim_time}]
     )
 
     joint_state_publisher_gui_node = Node(
@@ -63,9 +64,9 @@ def generate_launch_description():
         declare_use_sim_time_cmd,
         gui_arg,
         model_arg,
-        rviz_arg,
+        #rviz_arg,
         joint_state_publisher_node,
         joint_state_publisher_gui_node,
         robot_state_publisher_node,
-        rviz_node
+        #rviz_node
     ])

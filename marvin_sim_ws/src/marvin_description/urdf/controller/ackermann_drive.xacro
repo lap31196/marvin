@@ -18,8 +18,8 @@
                 <wheel_diameter>0.0635</wheel_diameter>
                
                 <!-- Limits -->
-                <max_wheel_torque>2.4</max_wheel_torque>
-                <max_wheel_acceleration>5.0</max_wheel_acceleration>
+                <max_wheel_torque>200.0</max_wheel_torque>
+                <max_wheel_acceleration>10.0</max_wheel_acceleration>
                 
                 <!-- Output -->
                 <odometry_frame>odom</odometry_frame>
@@ -27,9 +27,7 @@
 
                 <publish_odom>true</publish_odom>
                 <publish_odom_tf>true</publish_odom_tf>
-                <publish_wheel_tf>true</publish_wheel_tf>
-                <odometry_source>1</odometry_source>
-                
+                <publish_wheel_tf>true</publish_wheel_tf>                
             </plugin>
         </gazebo>
    
