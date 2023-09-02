@@ -87,9 +87,22 @@ def generate_launch_description():
         executable='async_slam_toolbox_node',
         name='slam_toolbox',
         output='screen')
+    
+    ld19_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource(
+        [os.path.join(get_package_share_directory('marvin_lidar'), 'launch'),
+         '/ld19.launch.py'])
+    )
+
+    tf_base_link_to_laser = Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            arguments = ['0.0', '0.0', '0.155', '0', '0', '1.57', 'base_link', 'laser']
+    )
 
     return LaunchDescription([
         declare_use_sim_time_argument,
+        ld19_launch,
+        tf_base_link_to_laser,
         declare_params_file_cmd,
         log_param_change,
         start_async_slam_toolbox_node

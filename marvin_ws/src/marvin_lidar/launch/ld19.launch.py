@@ -46,7 +46,7 @@ def generate_launch_description():
                 {'product_name': 'LDLiDAR_LD06'},
                 {'topic_name': '/scan'},
                 {'port_name': '/dev/rplidar'},
-                {'frame_id': 'lidar'},
+                {'frame_id': 'laser'},
                 {'laser_scan_dir': True},
                 {'enable_angle_crop_func': False},
                 {'angle_crop_min': 135.0},
