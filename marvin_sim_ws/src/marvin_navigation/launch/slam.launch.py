@@ -19,7 +19,7 @@ def generate_launch_description():
         'use_sim_time',
         default_value='true',
         description='Use simulation/Gazebo clock')
-    
+
     declare_params_file_cmd = DeclareLaunchArgument(
         'params_file',
         default_value=default_params_file,
@@ -37,14 +37,14 @@ def generate_launch_description():
                                condition=UnlessCondition(has_node_params))
 
     start_async_slam_toolbox_node = Node(
-        parameters=[
-            actual_params_file,
-            {'use_sim_time': use_sim_time}
-        ],
         package='slam_toolbox',
         executable='async_slam_toolbox_node',
         name='slam_toolbox',
-        output='screen')
+        output='screen',
+        parameters=[actual_params_file,
+                    {'use_sim_time': use_sim_time}
+                    ]
+    )
 
     return LaunchDescription([
         declare_use_sim_time_argument,

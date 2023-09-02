@@ -1,10 +1,9 @@
 import os
-from ament_index_python.packages import get_package_share_directory,get_package_share_path
+from ament_index_python.packages import get_package_share_directory, get_package_share_path
 from launch import LaunchDescription
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
-from launch_ros.substitutions import FindPackageShare
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 
@@ -64,7 +63,8 @@ def generate_launch_description():
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
-        #launch_arguments={'extra_gazebo_args': '--ros-args --params-file ' + gazebo_params_file}.items()
+        launch_arguments={
+            'extra_gazebo_args': '--ros-args --params-file ' + gazebo_params_file}.items()
     )
 
     # Run the spawner node from the gazebo_ros package. The entity name doesn't really matter if you only have a single robot.
@@ -81,5 +81,5 @@ def generate_launch_description():
         spawn_entity,
         rviz_node,
         joystick,
-        #twist_mux,
+        twist_mux,
     ])
