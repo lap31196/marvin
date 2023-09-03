@@ -35,6 +35,12 @@ Parameter Description:
 
 
 def generate_launch_description():
+    tf_base_link_to_laser = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        arguments=['0.0', '0.0', '0.155', '-1.57',
+                   '0', '0', 'base_footprint', 'laser']
+    )
     return LaunchDescription([
         Node(
             # ldlidar publisher node
@@ -53,4 +59,5 @@ def generate_launch_description():
                 {'angle_crop_max': 225.0}
             ]
         ),
+        tf_base_link_to_laser
     ])

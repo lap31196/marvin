@@ -93,16 +93,11 @@ def generate_launch_description():
          '/ld19.launch.py'])
     )
 
-    tf_base_link_to_laser = Node(
-            package='tf2_ros',
-            executable='static_transform_publisher',
-            arguments = ['0.0', '0.0', '0.155', '-1.57', '0', '0', 'base_link', 'laser']
-    )
+   
 
     return LaunchDescription([
         declare_use_sim_time_argument,
-        ld19_launch,
-        tf_base_link_to_laser,
+        #ld19_launch,
         declare_params_file_cmd,
         log_param_change,
         start_async_slam_toolbox_node
