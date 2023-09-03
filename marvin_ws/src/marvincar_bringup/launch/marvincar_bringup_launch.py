@@ -80,6 +80,11 @@ def generate_launch_description():
         executable='marvin_joy',
     )
 
+    joy_node = Node(
+        package='joy',
+        executable='joy_node'
+    )
+
     return LaunchDescription([
         gui_arg,
         model_arg,
@@ -93,4 +98,5 @@ def generate_launch_description():
         imu_filter_node,
         ekf_node,
         marvin_joy_node,
+        joy_node
     ])
