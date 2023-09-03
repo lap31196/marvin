@@ -83,7 +83,7 @@ def generate_launch_description():
     return LaunchDescription([
         gui_arg,
         model_arg,
-        rviz_arg,
+        #rviz_arg,
         pub_odom_tf_arg,
         joint_state_publisher_node,
         joint_state_publisher_gui_node,

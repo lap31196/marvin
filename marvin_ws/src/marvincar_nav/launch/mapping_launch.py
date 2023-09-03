@@ -96,7 +96,7 @@ def generate_launch_description():
     tf_base_link_to_laser = Node(
             package='tf2_ros',
             executable='static_transform_publisher',
-            arguments = ['0.0', '0.0', '0.155', '0', '0', '1.57', 'base_link', 'laser']
+            arguments = ['0.0', '0.0', '0.155', '-1.57', '0', '0', 'base_link', 'laser']
     )
 
     return LaunchDescription([

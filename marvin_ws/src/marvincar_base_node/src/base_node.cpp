@@ -51,8 +51,8 @@ class OdomPublisher:public rclcpp ::Node
             this->declare_parameter<double>("wheelbase",0.25);
             this->declare_parameter<std::string>("odom_frame","odom");
             this->declare_parameter<std::string>("base_footprint_frame","base_footprint"); 
-            this->declare_parameter<double>("linear_scale_x",1.0);
-            this->declare_parameter<double>("linear_scale_y",1.0);
+            this->declare_parameter<double>("linear_scale_x",0.18);
+            this->declare_parameter<double>("linear_scale_y",0.22);
             this->declare_parameter<bool>("pub_odom_tf",true);
 
             this->get_parameter<double>("linear_scale_x",linear_scale_x_);
